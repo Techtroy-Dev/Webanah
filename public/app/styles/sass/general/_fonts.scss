@@ -1,0 +1,105 @@
+$font-path-base: "/app/fonts/";
+
+@font-face {
+    font-weight: 400;
+    font-family: "CircularXXWeb";
+    font-style: normal;
+    src: url(#{$font-path-base+"CircularXXWeb-Regular.woff2"}) format("woff2");
+    src: url(#{$font-path-base+"CircularXXWeb-Regular.woff"}) format("woff");
+}
+
+@font-face {
+    font-weight: 700;
+    font-family: "CircularXXWeb";
+    font-style: normal;
+    src: url(#{$font-path-base+"CircularXXWeb-Bold.woff2"}) format("woff2");
+    src: url(#{$font-path-base+"CircularXXWeb-Bold.woff"}) format("woff");
+}
+
+@font-face {
+    font-weight: 900;
+    font-family: "CircularXXWeb";
+    font-style: normal;
+    src: url(#{$font-path-base+"CircularXXWeb-Bold.woff2"}) format("woff2");
+    src: url(#{$font-path-base+"CircularXXWeb-Bold.woff"}) format("woff");
+}
+
+@mixin font-proxima-nova-alt-regular {
+    // font-family: "proxima-nova-alt", sans-serif;
+    font-family: $font-family;
+    font-style: normal;
+    ////  font-weight: 400;
+    font-display: auto;
+}
+
+@mixin font-proxima-nova-alt-semibold {
+    //  font-family: "proxima-nova-alt", sans-serif;
+    //font-family: 'Montserrat', sans-serif;
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 600;
+    font-display: auto;
+}
+
+@mixin font-proxima-nova-alt-bold {
+    //   font-family: "proxima-nova-alt", sans-serif;
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 700;
+    font-display: auto;
+}
+
+@mixin font-proxima-nova-alt-light {
+    // font-family: "proxima-nova-alt", sans-serif;
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 300;
+    font-display: auto;
+}
+
+//Google fonts
+
+@mixin font-montserrat-bold {
+    font-family: $font-family;
+    font-style: normal;
+    font-display: auto;
+    font-weight: 700;
+}
+
+@mixin font-hind-normal {
+    font-family: $font-family;
+    font-style: normal;
+    font-display: auto;
+    font-weight: 500;
+}
+
+@mixin font-montserrat-alt {
+    font-family: $font-family;
+    font-style: normal;
+    font-display: auto;
+    font-weight: 700;
+}
+
+@mixin font-circular-web-normal {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 500;
+    font-display: auto;
+}
+
+@mixin font-circular-web-bold {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 600;
+    font-display: auto;
+}
+
+
+
+
+
+//@include font-montserrat-bold;
+
+//  @include font-hind-normal;
+
+//  @include font-montserrat-alt;

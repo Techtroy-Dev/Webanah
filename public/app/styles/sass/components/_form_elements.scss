@@ -1,0 +1,17 @@
+.form-control {
+    height: 40px;
+
+    &:focus {
+        border-color: #e4e4e4;
+        box-shadow: none;
+    }
+}
+
+.form-group {
+        margin-bottom: 18px;
+    }
+
+label {
+    margin-bottom: 7px;
+}
+
