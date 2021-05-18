@@ -25,12 +25,16 @@ function Header() {
             	  position: fixed;
             	  z-index: 2;
             `}>
-				<Image
-					src="/images/webanah-logo.png"
-					width={63 * 0.65}
-					height={65 * 0.65}
-					layout="fixed"
-				/>
+				<Link href="/">
+					<a>
+						<Image
+							src="/images/webanah-logo.png"
+							width={63 * 0.65}
+							height={65 * 0.65}
+							layout="fixed"
+						/>
+					</a>
+				</Link>
 			</div>
 			<faSolid.Search
 				css={css`

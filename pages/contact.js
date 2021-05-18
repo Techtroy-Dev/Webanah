@@ -38,6 +38,7 @@ const Contact = () => (
                     }
                     @media (min-width: 1200px) {
                         padding: 3rem 10rem;
+                        margin-top: 0;
                         flex-direction: row;
                         position: relative;
                     }
@@ -186,6 +187,7 @@ function Form() {
                       /* font-family: 'Green Lantern'; */
                       /* font-style: oblique 40deg; */
                       color: #16f533;
+                      font-size: 0.9rem;
                       /* letter-spacing: 0.1rem; */
                       /* padding-top: 0.5rem; */
                   }
@@ -268,7 +270,7 @@ function Form() {
                   }
                   `}>
                         <label htmlFor="message">Message</label>
-                        <textarea id="message" name="message" type="text" placeholder="Details..."
+                        <textarea id="message" name="message" type="text" placeholder="How can we help you today?"
                             rows={7} required />
                         <div
                             css={css`
@@ -296,7 +298,7 @@ function Form() {
                       display: none;
                       @media (min-width: 1200px) {
                         display: block;
-                        padding: 0 10%;
+                        padding: 0 5%;
                         align-self: center;
                       }
                       @media (min-width: 1400px) {
@@ -306,8 +308,8 @@ function Form() {
                         <Image
                             src="/images/webanah-character6.png"
                             layout="intrinsic"
-                            width={576}
-                            height={925}
+                            width={472}
+                            height={864}
                         />
                     </div>
                 </div>

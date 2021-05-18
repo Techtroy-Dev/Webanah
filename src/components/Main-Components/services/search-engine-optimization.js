@@ -92,6 +92,7 @@ const SearchEngineOptimization = () => (
               z-index: -1;
               align-self: end;
               justify-self: center;
+              padding: 0 30%;
 
               @media (max-width: 320px) {
                   align-self: center;
@@ -115,32 +116,46 @@ const SearchEngineOptimization = () => (
                   grid-column: 2 / 3;
                   align-self: center;
                   margin-top: 0;
-                  padding: 0 20%;
+                  padding: 0 30%;
                }
                       
               // XX-Large devices (larger desktops, 1400px and up)
               @media (min-width: 1400px) {  }
 
-              animation: move_seo 2s linear;
-              animation-delay: 0.75s;
-              @keyframes move_seo {
-                0% {
-                    transform: translate(0, 400%);
-                    opacity: 0;
-                }
-                100% {
-                    transform: translate(0, 0%);
-                    opacity: 1;
-                }
-            }
               `}
         >
-            <Image
-                src="/images/SEO.png"
-                layout="intrinsic"
-                width={685}
-                height={738}
-            />
+            <div
+                css={css`
+                  display: flex;
+                  flex-direction: column;
+                  `}>
+                <Image
+                    css={css`
+                    animation: move_seo 2s linear;
+                    animation-delay: 0.75s;
+                    @keyframes move_seo {
+                      0% {
+                          transform: translate(0, 400%);
+                          opacity: 0;
+                      }
+                      100% {
+                          transform: translate(0, 0%);
+                          opacity: 1;
+                      }
+                    }`
+                    }
+                    src="/images/seo-rocket.png"
+                    layout="intrinsic"
+                    width={293}
+                    height={609}
+                />
+                {/* <Image
+                    src="/images/seo-platform.png"
+                    layout="intrinsic"
+                    width={685}
+                    height={458}
+                /> */}
+            </div>
         </div>
     </div>
 )

@@ -20,7 +20,10 @@ const AboutUs = () => (
           height: 110%;
           position: relative;
           &:after {
-              background: -290% 0% / 90% no-repeat url('/images/webanah-character1.png');
+              background: top 10vh left -60vw / 120% no-repeat url('/images/webanah-character1.png');
+              @media (min-width: 1200px) {
+                  background: -210% 0% / 80% no-repeat url('/images/webanah-character1.png');
+              }
               content: "";
               opacity: 0.3;
               top: 0;

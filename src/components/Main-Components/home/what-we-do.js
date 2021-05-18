@@ -21,9 +21,12 @@ const WhatWeDo = () => (
           height: 110%;
           position: relative;
           &:after {
-              background: right -40% top 20% / 60% no-repeat url('/images/webanah-character2.png');
+              background: right -50vw top 2vh/140% no-repeat url('/images/webanah-character2.png');
+              @media (min-width: 1200px) {
+                  background: right -40% top 20% / 60% no-repeat url('/images/webanah-character2.png');
+              }
               content: "";
-              opacity: 0.3;
+              opacity: 0.2;
               top: 0;
               left: 0;
               bottom: 0;

@@ -21,7 +21,10 @@ const Home = () => (
           height: 110%;
           position: relative;
           &:after {
-              background: right -50% top 20% / 60% no-repeat url('/images/webanah-character3.png');
+              background: top -25vh right -30vw / 200% no-repeat url('/images/webanah-character3.png');
+              @media (min-width: 1200px) {
+                  background: left 50vw bottom 20vh / 70% no-repeat url('/images/webanah-character3.png');
+              }
               content: "";
               opacity: 0.3;
               top: 0;
@@ -126,7 +129,7 @@ const Home = () => (
             css={css`
               // X-Small devices (portrait phones, less than 576px)
               /* padding: 0 5%; */
-              margin-bottom: -12.5vh;
+              margin-bottom: -30.5vh;
               grid-row: 1 / 2;
               z-index: -1;
               align-self: center;

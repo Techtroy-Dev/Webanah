@@ -98,7 +98,7 @@ const OurMission = () => (
               padding: 0 10%;
               grid-row: 1 / 2;
               z-index: -1;
-              align-self: end;
+              align-self: center;
               justify-self: center;
 
               @media (max-width: 320px) {

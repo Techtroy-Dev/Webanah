@@ -93,24 +93,23 @@ export const StyledMenu = styled.nav`
   justify-content: space-around;
   align-items: center;
   background: #000d23;
-  height: 90vh;
+  height: 100vh;
   @media (max-width: 768px) {
     height: 90vh;
   }
   text-align: left;
-  padding: 2rem;
+  padding: 0 1rem;
   position: fixed;
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
   transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
 
-
   div {
-    padding: 1rem 0;
+    /* padding: 1rem 0; */
   }
   a {
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: bold;
@@ -130,20 +129,33 @@ const Menu = ({ open }) => {
   return (
     <StyledMenu open={open}>
       <div>
-        <Image
-          src="/images/Webanah_logo.png"
-          width={149 * 0.75}
-          height={135 * 0.75}
-          layout="fixed"
-        />
+        <Link href="/">
+          <a>
+            <Image
+              src="/images/Webanah_logo.png"
+              width={149 * 0.5}
+              height={135 * 0.5}
+              layout="fixed"
+            />
+          </a>
+        </Link>
       </div>
-      <div><Link href="/"><a>Home</a></Link></div>
-      <div><Link href="/about"><a>About Us</a></Link></div>
-      <div><Link href="/services"><a>Services</a></Link></div>
-      <div><Link href="/portfolio"><a>Portfolio</a></Link></div>
-      <div><Link href="/case-studies"><a>Case Studies</a></Link></div>
-      <div><Link href="/blogs"><a>Blogs</a></Link></div>
-      <div><Link href="/contact"><a>Contact Us</a></Link></div>
+      <div
+        css={css`
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          text-align: center;
+          height: 50%;
+          `}>
+        <div><Link href="/"><a>Home</a></Link></div>
+        <div><Link href="/about"><a>About Us</a></Link></div>
+        <div><Link href="/services"><a>Services</a></Link></div>
+        <div><Link href="/portfolio"><a>Portfolio</a></Link></div>
+        <div><Link href="/case-studies"><a>Case Studies</a></Link></div>
+        <div><Link href="/blogs"><a>Blogs</a></Link></div>
+        <div><Link href="/contact"><a>Contact Us</a></Link></div>
+      </div>
       <div
         css={css`
           display: flex;

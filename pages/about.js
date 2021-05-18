@@ -78,7 +78,7 @@ const About = () => {
                     scrub: 1,
                     snap: 1 / (sections.length - 1),
                     start: "top top",
-                    end: "+=5000"
+                    end: "+=1250"
                 }
             });
         // console.log(sections)
@@ -93,7 +93,7 @@ const About = () => {
             let tween = gsap.from(section, {
                 opacity: 0,
                 // scale: 0.6,
-                duration: 1.5,
+                duration: 0.5,
                 force3D: true,
                 paused: true
             });
