@@ -114,7 +114,7 @@ function CaseStudyCard(props) {
                         <Image src="/images/case-study-1.png" alt="Portfolio Image 1" width={410} height={410}></Image>
                     </div>
 
-                    <div css={text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet magna</div>
+                    <div css={text}>Coming soon...</div>
 
                 </div>
 
@@ -122,7 +122,7 @@ function CaseStudyCard(props) {
 
                     <div css={image}><Image src="/images/case-study-2.png" alt="Portfolio Image 2" width={410} height={410}></Image></div>
 
-                    <div css={text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet magna</div>
+                    <div css={text}>Coming soon...</div>
 
                 </div>
 
@@ -130,7 +130,7 @@ function CaseStudyCard(props) {
 
                     <div css={image}><Image src="/images/case-study-3.png" alt="Portfolio Image 3" width={410} height={410}></Image></div>
 
-                    <div css={text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet magna</div>
+                    <div css={text}>Coming soon...</div>
 
                 </div>
 

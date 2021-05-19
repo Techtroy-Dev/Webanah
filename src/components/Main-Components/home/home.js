@@ -23,10 +23,10 @@ const Home = () => (
           &:after {
               background: top -25vh right -30vw / 200% no-repeat url('/images/webanah-character3.png');
               @media (min-width: 1200px) {
-                  background: left 50vw bottom 20vh / 70% no-repeat url('/images/webanah-character3.png');
+                  background: top -15vh right -25vw / 70% no-repeat url('/images/webanah-character3.png');
               }
               content: "";
-              opacity: 0.3;
+              opacity: 0.2;
               top: 0;
               left: 0;
               bottom: 0;
@@ -82,7 +82,7 @@ const Home = () => (
                 css={css`
                   // X-Small devices (portrait phones, less than 576px)
                   padding: 0 0.5rem;
-                  margin-bottom: 0.5rem;
+                  margin-bottom: 0.25rem;
                   font-size: 0.80rem;
                   text-align: center;
 
@@ -122,7 +122,7 @@ const Home = () => (
                    }
                   `}
             >
-                <Link href="/contact"><Button>Contact Us</Button></Link>
+                <Link href="/contact"><Button><div>CONTACT US</div></Button></Link>
             </div>
         </div>
         <div

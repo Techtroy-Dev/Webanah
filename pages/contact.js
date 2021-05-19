@@ -47,7 +47,7 @@ const Contact = () => (
                     css={css`
                       font-family: 'Green Lantern';
                       color: #16f533;
-                      font-size: clamp(1.5rem, -0.875rem + 8.333vw, 1.75rem);
+                      font-size: clamp(1.5rem, -0.875rem + 8.333vw, 2rem);
                       letter-spacing: 0.5rem;
                       color: transparent;
                       -webkit-text-stroke: 0.06rem #16f533;
@@ -59,7 +59,7 @@ const Contact = () => (
                           bottom: 0;
                           left: 0;
                           margin-bottom: 150px;
-                          margin-left: 120px;
+                          margin-left: 110px;
                           transform: rotate(270deg);
                           transform-origin: 0 0;
                       }
@@ -283,7 +283,7 @@ function Form() {
                                   @media (min-width: 1200px) {
                                       margin-bottom: 0;
                                   }
-                          `} type="submit" primary>Submit</Button>
+                          `} type="submit"><div>SUBMIT</div></Button>
                         </div>
                     </div>
                 </form>

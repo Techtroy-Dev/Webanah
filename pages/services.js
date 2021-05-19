@@ -21,8 +21,8 @@ const Space = styled.div`
 `
 
 const Container = styled.div`
-  width: 700%;
-  height: 100%;
+  width: 700vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,8 +31,8 @@ const Container = styled.div`
 
 const Panel = styled.div`
   // X-Small devices (portrait phones, less than 576px)
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   padding: 0;
 
   // Small devices (landscape phones, 576px and up)
@@ -68,7 +68,7 @@ const Services = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     useEffect(() => {
-        let duration = 1,
+        let duration = 0.25,
             sections = containerRef.current.querySelectorAll(".panel"),
             sectionIncrement = duration / (sections.length - 1),
             tl = gsap.timeline({
@@ -78,7 +78,7 @@ const Services = () => {
                     scrub: 1,
                     snap: 1 / (sections.length - 1),
                     start: "top top",
-                    end: "+=1250"
+                    end: "+=1500"
                 }
             });
         // console.log(sections)
@@ -91,9 +91,9 @@ const Services = () => {
         // everything below this is just for the fading/scaling up which is NOT scrubbed - it's all dynamic, triggered when each section enters/leaves so that the fading/scaling occurs at a consistent rate no matter how fast you scroll!
         sections.forEach((section, index) => {
             let tween = gsap.from(section, {
-                opacity: 0,
+                // opacity: 0,
                 // scale: 0.6,
-                duration: 0.5,
+                duration: 0,
                 force3D: true,
                 paused: true
             });

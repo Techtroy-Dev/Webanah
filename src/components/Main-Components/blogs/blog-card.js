@@ -113,7 +113,8 @@ const imageDiv = css`
   margin-left: 45px;
   }*/
   &:hover {
-      filter: saturate(150%);
+      ${'' /* filter: saturate(200%); */}
+      filter: hue-rotate(340deg);
   }`
 
 
@@ -136,11 +137,10 @@ function BlogsCard(props) {
             css={css`
               /* height: 93.75rem; */
               margin-top: 5rem;
-              height: 100vh;
+              /* height: 100vh; */
               @media (max-width: 768px) {
                   /* height: 196.875rem; */
                   }`}>
-
             <div
                 css={css`
                   text-align: center;
@@ -175,7 +175,7 @@ function BlogsCard(props) {
                         </div>
                     </div>
 
-                    <div css={text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet magna</div>
+                    <div css={text}>Coming soon...</div>
 
                 </div>
 
@@ -190,7 +190,7 @@ function BlogsCard(props) {
                         </div>
                     </div>
 
-                    <div css={text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet magna</div>
+                    <div css={text}>Coming soon...</div>
 
                 </div>
 
@@ -205,7 +205,7 @@ function BlogsCard(props) {
                         </div>
                     </div>
 
-                    <div css={text} >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet magna</div>
+                    <div css={text} >Coming soon...</div>
 
                 </div>
 

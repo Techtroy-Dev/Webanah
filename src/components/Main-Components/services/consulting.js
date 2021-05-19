@@ -91,8 +91,9 @@ const Consulting = () => (
               padding: 0 25%;
               grid-row: 1 / 2;
               z-index: -1;
-              align-self: end;
+              align-self: center;
               justify-self: center;
+              margin-bottom: -5rem;
               
               @media (max-width: 320px) {
                   align-self: center;

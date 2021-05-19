@@ -12,6 +12,7 @@ import AboutUs from "../src/components/Main-Components/about-us/about-us"
 import OurMission from "../src/components/Main-Components/about-us/our-mission"
 import OurCoreValues from "../src/components/Main-Components/about-us/our-core-values"
 import BuildTheBestExperience from "../src/components/Main-Components/about-us/build-the-best-experience"
+import Testimonials from "../src/components/Main-Components/about-us/testimonials"
 import LetsWorkTogether from "../src/components/Main-Components/about-us/lets-work-together"
 import Layout from "../src/components/Main-Components/Layout"
 
@@ -20,8 +21,8 @@ const Space = styled.div`
 `
 
 const Container = styled.div`
-  width: 600%;
-  height: 100%;
+  width: 700vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,8 +31,8 @@ const Container = styled.div`
 
 const Panel = styled.div`
   // X-Small devices (portrait phones, less than 576px)
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   padding: 0;
 
   // Small devices (landscape phones, 576px and up)
@@ -64,11 +65,11 @@ const About = () => {
     const containerRef = useRef(null);
     const [section, setSection] = useState(0); // Section of page we are currently ON.
     const [toSection, setToSection] = useState(0);
-    const sectionTitles = ['BUSINESS GROWTH AGENCY', 'ABOUT US', 'OUR MISSION', 'OUR CORE VALUES', 'BUILD THE BEST EXPERIENCE', 'LETS WORK TOGETHER']
+    const sectionTitles = ['BUSINESS GROWTH AGENCY', 'ABOUT US', 'OUR MISSION', 'OUR CORE VALUES', 'BUILD THE BEST EXPERIENCE', 'TESTIMONIALS', 'LETS WORK TOGETHER']
     gsap.registerPlugin(ScrollTrigger);
 
     useEffect(() => {
-        let duration = 1,
+        let duration = 0.25,
             sections = containerRef.current.querySelectorAll(".panel"),
             sectionIncrement = duration / (sections.length - 1),
             tl = gsap.timeline({
@@ -78,7 +79,7 @@ const About = () => {
                     scrub: 1,
                     snap: 1 / (sections.length - 1),
                     start: "top top",
-                    end: "+=1250"
+                    end: "+=1500"
                 }
             });
         // console.log(sections)
@@ -91,9 +92,9 @@ const About = () => {
         // everything below this is just for the fading/scaling up which is NOT scrubbed - it's all dynamic, triggered when each section enters/leaves so that the fading/scaling occurs at a consistent rate no matter how fast you scroll!
         sections.forEach((section, index) => {
             let tween = gsap.from(section, {
-                opacity: 0,
+                // opacity: 0,
                 // scale: 0.6,
-                duration: 0.5,
+                duration: 0,
                 force3D: true,
                 paused: true
             });
@@ -153,7 +154,7 @@ const About = () => {
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <link rel="shortcut icon" href="/images/Webanah_logo.png" type="image/png"></link>
             </Head>
-            <Scrolls total={6} current={section} onNavigate={setToSection} sectionTitles={sectionTitles} />
+            <Scrolls total={7} current={section} onNavigate={setToSection} sectionTitles={sectionTitles} />
             <Layout backgroundimage='/images/background2.png'>
                 {/* <BusinessGrowthAgency />
             <Space />
@@ -177,15 +178,38 @@ const About = () => {
                     <Panel className="panel">
                         <OurMission />
                     </Panel>
-                    <Panel className="panel">
+                    <Panel className="panel"
+                        css={css`
+                          display: flex;
+                          flex-direction: column;
+                          justify-content: center;
+                          // X-Large devices (large desktops, 1200px and up)
+                          @media (min-width: 1200px) { 
+                          	  margin-bottom: 5rem;
+                          	  }
+                          `}
+                    >
                         <OurCoreValues />
                     </Panel>
                     <Panel className="panel"
                         css={css`
-                      padding-left: 0px;
+                          padding-left: 0px;
                       /* padding-right: 5rem; */
                       `}>
                         <BuildTheBestExperience />
+                    </Panel>
+                    <Panel className="panel"
+                        css={css`
+                          display: flex;
+                          flex-direction: column;
+                          justify-content: center;
+                          // X-Large devices (large desktops, 1200px and up)
+                          @media (min-width: 1200px) { 
+                          	  /* margin-bottom: 5rem; */
+                          	  }
+                          `}
+                    >
+                        <Testimonials />
                     </Panel>
                     <Panel className="panel">
                         <LetsWorkTogether />

@@ -92,7 +92,7 @@ const SearchEngineOptimization = () => (
               z-index: -1;
               align-self: end;
               justify-self: center;
-              padding: 0 30%;
+              padding: 0 35%;
 
               @media (max-width: 320px) {
                   align-self: center;
@@ -104,7 +104,9 @@ const SearchEngineOptimization = () => (
                }
                           
               // Medium devices (tablets, 768px and up)
-              @media (min-width: 768px) {  }
+              @media (min-width: 768px) { 
+                  padding: 0 40%;
+               }
                       
               // Large devices (desktops, 992px and up)
               @media (min-width: 992px) { 

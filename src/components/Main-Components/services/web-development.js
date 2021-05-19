@@ -122,7 +122,9 @@ const WebDevelopment = () => (
               @media (min-width: 1200px) { 
                   grid-column: 2 / 3;
                   align-self: center;
-                  padding: 0 10%;
+                  /* padding: 0 10%; */
+                  padding: 0;
+                  margin-bottom: 2rem;
                }
                       
               // XX-Large devices (larger desktops, 1400px and up)

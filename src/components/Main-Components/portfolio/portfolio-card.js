@@ -12,7 +12,7 @@ const flexContainer = css`
   display: flex;
   align-items: center;
   overflow-x: auto;
-  gap: 3rem;
+  gap: 0rem;
   ${'' /* height: 80vh; */}
   ${'' /* margin-top: 2.375rem; */}
   text-align: center;
@@ -137,7 +137,7 @@ function PortfolioCard(props) {
     return (
         <div
             css={css`
-              height: 100vh;
+              /* height: 100vh; */
               margin-top: 5rem;
               /* height: 93.75rem; */
               @media (max-width: 768px) {

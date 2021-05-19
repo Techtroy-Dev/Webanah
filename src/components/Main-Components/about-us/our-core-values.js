@@ -60,13 +60,13 @@ const base = css`
 const OurCoreValues = () => (
     <div
         css={css`
-          margin-top: 7rem;
+          /* margin-top: 7rem; */
           @media (min-width: 768px) {
               /* margin-top: 5rem; */
               padding: 1rem;
           }
           @media (min-width: 992px) {
-              margin-top: 7.5rem;
+              /* margin-top: 7.5rem; */
           }
           @media (min-width: 1200px) {
               /* margin-top: 30vh; */

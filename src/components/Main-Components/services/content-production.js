@@ -33,7 +33,7 @@ const ContentProduction = () => (
                 
               // X-Large devices (large desktops, 1200px and up)
               @media (min-width: 1200px) { 
-                  /* margin-top: 5rem; */
+                  margin-top: -5rem;
                }
               `}
         >

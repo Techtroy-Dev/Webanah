@@ -14,7 +14,7 @@ const LetsWorkTogether = () => (
     `}>
         <div
             css={css`
-          text-align: center;
+              text-align: center;
           `}
         >
             <div
@@ -48,7 +48,7 @@ const LetsWorkTogether = () => (
                           color: white;
               `}
                     >
-                        Let's do this
+                        <div>let's do this</div>
                     </Button>
                 </a>
             </Link>

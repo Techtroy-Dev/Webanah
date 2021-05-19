@@ -60,10 +60,10 @@ export const BottomLine = styled.div`
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
-  width: 90%;
+  width: 90vw;
   justify-content: space-evenly;
   @media (min-width: 1200px) {
-    width: 70%;
+    width: 80vw;
     justify-content: space-between;
   }
 `
@@ -191,7 +191,10 @@ export const Line = styled.div`
   z-index: -1;
   border: 0.001rem solid grey;
   filter: drop-shadow(0 0 0.5rem grey);
-  width: 65vw;
+  width: 75vw;
+  @media (max-width: 1200px) {
+    width: 65vw;
+  }
   left: 50%;
   transform: translateX(-50%);
 `

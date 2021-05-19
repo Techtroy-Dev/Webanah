@@ -24,7 +24,7 @@ const BusinessGrowthAgency = () => (
                   background: -50% -10% / 60% no-repeat url('/images/webanah-character4.png');
               }
               content: "";
-              opacity: 0.3;
+              opacity: 0.2;
               top: 0;
               left: 0;
               bottom: 0;
@@ -106,7 +106,7 @@ const BusinessGrowthAgency = () => (
                    }
                   `}
             >
-                <Link href="/contact"><Button>Contact Us</Button></Link>
+                <Link href="/contact"><Button>CONTACT US</Button></Link>
             </div>
         </div>
         <div

@@ -13,6 +13,7 @@ import gsap from "gsap"
 import { useRef, useEffect, useCallback } from "react"
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 import Layout from "../src/components/Main-Components/Layout"
+import Services from "../src/components/Main-Components/home/services"
 // import Layout from "../src/components/Main-Components/Layout";
 // import Link from "next/link"
 
@@ -21,8 +22,8 @@ const Space = styled.div`
 `
 
 const Container = styled.div`
-  width: 400%;
-  height: 100%;
+  width: 500vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,8 +32,8 @@ const Container = styled.div`
 
 const Panel = styled.div`
   // X-Small devices (portrait phones, less than 576px)
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   padding: 0;
 
   // Small devices (landscape phones, 576px and up)
@@ -61,14 +62,14 @@ const Panel = styled.div`
   will-change: transform;
 `
 
-function Main({ ...props }) {
+function Main() {
 	const containerRef = useRef(null)
 	const [section, setSection] = useState(0); // Section of page we are currently ON.
-	const sectionTitles = ['HOME', 'WHAT WE DO', 'BEST SOLUTION', 'WHY WE STAND OUT']
+	const sectionTitles = ['HOME', 'WHAT WE DO', 'SERVICES', 'BEST SOLUTION', 'WHY WE STAND OUT']
 	gsap.registerPlugin(ScrollTrigger);
 
 	useEffect(() => {
-		let duration = 1,
+		let duration = 0.25,
 			sections = containerRef.current.querySelectorAll(".panel"),
 			sectionIncrement = duration / (sections.length - 1),
 			tl = gsap.timeline({
@@ -78,7 +79,7 @@ function Main({ ...props }) {
 					scrub: 1,
 					snap: 1 / (sections.length - 1),
 					start: "top top",
-					end: "+=1250"
+					end: "+=1500"
 				}
 			});
 		// console.log(sections)
@@ -91,9 +92,9 @@ function Main({ ...props }) {
 		// everything below this is just for the fading/scaling up which is NOT scrubbed - it's all dynamic, triggered when each section enters/leaves so that the fading/scaling occurs at a consistent rate no matter how fast you scroll!
 		sections.forEach((section, index) => {
 			let tween = gsap.from(section, {
-				opacity: 0,
+				// opacity: 0,
 				// scale: 0.6,
-				duration: 0.5,
+				duration: 0,
 				force3D: true,
 				paused: true
 			});
@@ -142,7 +143,7 @@ function Main({ ...props }) {
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<link rel="shortcut icon" href="/images/Webanah_logo.png" type="image/png"></link>
 			</Head>
-			<Scrolls total={4} current={section} sectionTitles={sectionTitles} />
+			<Scrolls total={5} current={section} sectionTitles={sectionTitles} />
 			<Layout backgroundimage='/images/background1.png'>
 				{/* <Home />
 				<Space />
@@ -159,6 +160,9 @@ function Main({ ...props }) {
 						</Panel>
 						<Panel className="panel">
 							<WhatWeDo />
+						</Panel>
+						<Panel className="panel">
+							<Services />
 						</Panel>
 						<Panel className="panel">
 							<BestSolution />

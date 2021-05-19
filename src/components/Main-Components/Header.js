@@ -59,7 +59,10 @@ function Header() {
 						<Button
 							css={css`
 							  font-weight: bold;
-							  `}>Contact Us</Button>
+							  `}
+						>
+							<div>CONTACT US</div>
+						</Button>
 					</a>
 				</Link>
 			</div>

@@ -23,7 +23,7 @@ const WhatWeDo = () => (
           &:after {
               background: right -50vw top 2vh/140% no-repeat url('/images/webanah-character2.png');
               @media (min-width: 1200px) {
-                  background: right -40% top 20% / 60% no-repeat url('/images/webanah-character2.png');
+                  background: right -80% top 0% / 70% no-repeat url('/images/webanah-character2.png');
               }
               content: "";
               opacity: 0.2;
@@ -69,7 +69,7 @@ const WhatWeDo = () => (
                 css={css`
                   // X-Small devices (portrait phones, less than 576px)
                   padding: 0.5rem;
-                  margin-bottom: 0.5rem;
+                  margin-bottom: 0.25rem;
                   font-size: 0.80rem;
                   text-align: center;
 
@@ -109,7 +109,7 @@ const WhatWeDo = () => (
                    }
                   `}
             >
-                <Link href="/contact"><Button>Learn More</Button></Link>
+                <Link href="/contact"><Button><div>Learn More</div></Button></Link>
             </div>
         </div>
         <div
@@ -136,7 +136,7 @@ const WhatWeDo = () => (
               // X-Large devices (large desktops, 1200px and up)
               @media (min-width: 1200px) { 
                   grid-column: 2 / 3;
-                  margin-bottom: 0;
+                  margin-bottom: 2rem;
                   align-self: center;
                   padding: 0 10%;
                }

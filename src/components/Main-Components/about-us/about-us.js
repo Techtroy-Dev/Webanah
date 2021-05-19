@@ -25,7 +25,7 @@ const AboutUs = () => (
                   background: -210% 0% / 80% no-repeat url('/images/webanah-character1.png');
               }
               content: "";
-              opacity: 0.3;
+              opacity: 0.2;
               top: 0;
               left: 0;
               bottom: 0;
@@ -108,11 +108,15 @@ const AboutUs = () => (
               // X-Small devices (portrait phones, less than 576px)
               /* padding: 0 10%; */
               margin-top: 7rem;
-              margin-right: -5rem;
+              margin-right: -2rem;
               grid-row: 1 / 2;
               z-index: -1;
               align-self: start;
               justify-self: center;
+
+              @media (max-width: 320px) {
+                  margin-top: 5rem;
+              }
 
               // Small devices (landscape phones, 576px and up)
               @media (min-width: 576px) { 
