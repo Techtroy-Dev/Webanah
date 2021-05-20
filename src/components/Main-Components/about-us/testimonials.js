@@ -73,6 +73,7 @@ const base = css`
   @media (min-width: 320px) and (max-width: 480px) {
     
     /* CSS */
+    padding: 0 0.5rem;
     
   }
   > div {
@@ -84,7 +85,7 @@ const base = css`
       & > div {
           padding: 1rem;
           @media (max-width: 1200px) {
-              padding: 0;
+              padding: 0 0.25rem;
           }
       }
       div:nth-of-type(1) {
@@ -106,57 +107,57 @@ const base = css`
 `
 
 const Testimonials = () => (
-    <div
-        css={base}>
-        <div>
-            <div>
-                "THEY HAVE THE BEST MARKETING TEAM"
+  <div
+    css={base}>
+    <div>
+      <div>
+        "THEY HAVE THE BEST MARKETING TEAM"
             </div>
-            <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lorem nibh, congue a risus sit amet, rhoncus iaculis nulla. Ut cursus sollicitudin odio quis pharetra. Nam diam arcu, consectetur eu dapibus sit amet, laoreet efficitur magna. Interdum et malesuada fames.
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lorem nibh, congue a risus sit amet, rhoncus iaculis nulla. Ut cursus sollicitudin odio quis pharetra. Nam diam arcu, consectetur eu dapibus sit amet, laoreet efficitur magna. Interdum et malesuada fames.
             </div>
-            <div>
-                <Leaf size={32} color="green"
-                    css={css`
+      <div>
+        <Leaf size={32} color="green"
+          css={css`
                   padding-right: 0.5rem;
                 `}
-                />
+        />
                 Company Name
             </div>
-        </div>
-        <div>
-            <div>
-                "THEY HAVE THE BEST MARKETING TEAM"
-            </div>
-            <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lorem nibh, congue a risus sit amet, rhoncus iaculis nulla. Ut cursus sollicitudin odio quis pharetra. Nam diam arcu, consectetur eu dapibus sit amet, laoreet efficitur magna. Interdum et malesuada fames.
-            </div>
-            <div>
-                <Leaf size={32} color="green"
-                    css={css`
-                      padding-right: 0.5rem;
-                `}
-                />
-                Company Name
-            </div>
-        </div>
-        <div>
-            <div>
-                "THEY HAVE THE BEST MARKETING TEAM"
-            </div>
-            <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lorem nibh, congue a risus sit amet, rhoncus iaculis nulla. Ut cursus sollicitudin odio quis pharetra. Nam diam arcu, consectetur eu dapibus sit amet, laoreet efficitur magna. Interdum et malesuada fames.
-            </div>
-            <div>
-                <Leaf size={32} color="green"
-                    css={css`
-                      padding-right: 0.5rem;
-                `}
-                />
-                Company Name
-            </div>
-        </div>
     </div>
+    <div>
+      <div>
+        "THEY HAVE THE BEST MARKETING TEAM"
+            </div>
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lorem nibh, congue a risus sit amet, rhoncus iaculis nulla. Ut cursus sollicitudin odio quis pharetra. Nam diam arcu, consectetur eu dapibus sit amet, laoreet efficitur magna. Interdum et malesuada fames.
+            </div>
+      <div>
+        <Leaf size={32} color="green"
+          css={css`
+                      padding-right: 0.5rem;
+                `}
+        />
+                Company Name
+            </div>
+    </div>
+    <div>
+      <div>
+        "THEY HAVE THE BEST MARKETING TEAM"
+            </div>
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lorem nibh, congue a risus sit amet, rhoncus iaculis nulla. Ut cursus sollicitudin odio quis pharetra. Nam diam arcu, consectetur eu dapibus sit amet, laoreet efficitur magna. Interdum et malesuada fames.
+            </div>
+      <div>
+        <Leaf size={32} color="green"
+          css={css`
+                      padding-right: 0.5rem;
+                `}
+        />
+                Company Name
+            </div>
+    </div>
+  </div>
 )
 
 export default Testimonials;

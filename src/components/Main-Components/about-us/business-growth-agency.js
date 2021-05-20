@@ -11,7 +11,13 @@ const BusinessGrowthAgency = () => (
           // X-Small devices (portrait phones, less than 576px)
           display: grid;
           grid-auto-rows: 50vh;
-          
+          background: linear-gradient(to top, #01102a 10%, transparent 90%);
+
+          // Medium devices (tablets, 768px and up)
+          @media (min-width: 768px) { 
+              background: none;
+           }
+
           // X-Large devices (large desktops, 1200px and up)
           @media (min-width: 1200px) {
               grid-template-columns: 1fr 1fr;
@@ -106,7 +112,7 @@ const BusinessGrowthAgency = () => (
                    }
                   `}
             >
-                <Link href="/contact"><Button>CONTACT US</Button></Link>
+                <Link href="/contact"><Button><div>CONTACT US</div></Button></Link>
             </div>
         </div>
         <div

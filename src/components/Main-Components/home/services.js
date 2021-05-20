@@ -147,6 +147,7 @@ const Services = () => (
         css={css`
                   grid-row: 1 / 2;
                   grid-column: 3 / 4;
+                  margin-left: -2rem;
 
                   animation: move_seo 1s linear infinite;
                   animation-direction: alternate;
@@ -195,10 +196,11 @@ const Services = () => (
         css={css`
                   grid-row: 2 / 3;
                   grid-column: 5 / 6;
+                  margin-right: -2rem;
 
-                  animation: move_b 1s linear infinite;
+                  animation: move_c 1s linear infinite;
                   animation-direction: alternate;
-                  @keyframes move_b {
+                  @keyframes move_c {
                       0% {
                           transform: translate(0px, 0%);
                       }

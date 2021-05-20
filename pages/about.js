@@ -76,10 +76,10 @@ const About = () => {
                 scrollTrigger: {
                     trigger: containerRef.current,
                     pin: true,
-                    scrub: 1,
+                    scrub: true,
                     snap: 1 / (sections.length - 1),
                     start: "top top",
-                    end: "+=1500"
+                    end: "+=2000"
                 }
             });
         // console.log(sections)
