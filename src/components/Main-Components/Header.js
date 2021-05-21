@@ -20,7 +20,7 @@ function Header() {
 			<Sidebar />
 			<div
 				css={css`
-            	  margin-left: 3rem;
+            	  margin-left: 3.5rem;
             	  margin-top: -0.2rem;
             	  position: fixed;
             	  z-index: 2;
@@ -38,6 +38,7 @@ function Header() {
 			</div>
 			<faSolid.Search
 				css={css`
+				  display: none;
             	  margin-left: auto;
             	  position: fixed;
             	  right: 6.5rem;
@@ -51,7 +52,8 @@ function Header() {
 			<div
 				css={css`
             	  position: fixed;
-            	  right: 1rem;
+            	  right: 1.125rem;
+				  margin-top: 0.25rem;
             	  z-index: 2;
             `}>
 				<Link href="/contact">

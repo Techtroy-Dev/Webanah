@@ -201,6 +201,7 @@ function Form() {
 
                       &::placeholder {
                           color: lightgray;
+                          font-family: 'Raleway', Helvetica, Arial, sans-serif;
                       }
                       &:focus {
                           border-color: #16f533;
@@ -216,13 +217,14 @@ function Form() {
                       margin-top: 0.1rem;
                       &::placeholder {
                           color: lightgray;
+                          font-family: 'Raleway', Helvetica, Arial, sans-serif;
                       }
                       &:focus {
                           border-color: #16f533;
                           outline: none;
                       }
-                      color: white;
-                  }
+                          color: white;
+                      }
                   }
               `}>
                     <div

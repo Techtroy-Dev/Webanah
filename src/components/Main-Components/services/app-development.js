@@ -116,7 +116,7 @@ const AppDevelopment = () => (
                   grid-column: 2 / 3;
                   padding: 0 10%;
                   align-self: center;
-                  margin-bottom: 3rem;
+                  margin-bottom: 5rem;
                }
 
               animation: move_ad 1s linear infinite;
