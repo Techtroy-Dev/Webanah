@@ -11,7 +11,7 @@ const Home = () => (
         css={css`
           // X-Small devices (portrait phones, less than 576px)
           display: grid;
-          grid-auto-rows: 50vh;
+          /* grid-auto-rows: 50vh; */
 
           // X-Large devices (large desktops, 1200px and up)
           @media (min-width: 1200px) {
@@ -40,7 +40,7 @@ const Home = () => (
             css={css`
               // X-Small devices (portrait phones, less than 576px)
               align-self: center;
-              margin-top: -7.5rem;
+              /* margin-top: -7.5rem; */
 
               // X-Large devices (large desktops, 1200px and up)
               @media (min-width: 1200px) { 
@@ -61,13 +61,19 @@ const Home = () => (
             <div
                 css={css`
                   // X-Small devices (portrait phones, less than 576px)
-                  padding: 0 15%;
+                  padding: 0 5%;
                   margin-bottom: -1rem;
-                  margin-left: -2.5rem;
+
+                  // Medium devices (tablets, 768px and up)
+                  @media (min-width: 768px) { 
+                      margin-top: -5rem;
+                   }
 
                   // X-Large devices (large desktops, 1200px and up)
                   @media (min-width: 1200px) { 
-                      padding: 0;
+                      padding: 0 15%;
+                      margin-left: -7rem;
+                      margin-top: 0;
                       }
             `}>
                 <Image
@@ -81,10 +87,12 @@ const Home = () => (
             <div
                 css={css`
                   // X-Small devices (portrait phones, less than 576px)
-                  padding: 0 0.5rem;
-                  margin-bottom: 0.25rem;
-                  font-size: 0.80rem;
+                  /* font-size: 0.80rem; */
                   text-align: center;
+                  padding: 1rem;
+                  padding-top: 0;
+                  margin-bottom: 0.25rem;
+
 
                   // Small devices (landscape phones, 576px and up)
                   @media (min-width: 576px) {  }
@@ -95,7 +103,6 @@ const Home = () => (
                   // Large devices (desktops, 992px and up)
                   @media (min-width: 992px) { 
                       font-size: 0.9rem;
-                      margin-bottom: 1rem;
                    }
                           
                   // X-Large devices (large desktops, 1200px and up)
@@ -129,7 +136,8 @@ const Home = () => (
             css={css`
               // X-Small devices (portrait phones, less than 576px)
               /* padding: 0 5%; */
-              margin-bottom: -30.5vh;
+              margin-bottom: -20.5vh;
+              margin-right: -5rem;
               grid-row: 1 / 2;
               z-index: -1;
               align-self: center;

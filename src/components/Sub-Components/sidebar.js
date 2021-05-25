@@ -2,12 +2,11 @@
 
 import { css, jsx } from "@emotion/react"
 import styled from '@emotion/styled'
-import * as faBrands from '@emotion-icons/fa-brands'
-import * as faRegular from '@emotion-icons/fa-regular'
-import * as faSolid from '@emotion-icons/fa-solid'
+import { FacebookF, Twitter, LinkedinIn, Instagram } from '@emotion-icons/fa-brands'
 import { useRef, useState } from 'react'
 import Link from "next/link"
 import Image from "next/image"
+import { useRouter } from 'next/router'
 import useOnClickOutside from "../../utils/use-onclickoutside"
 
 export const Sidebar = (props) => {
@@ -17,12 +16,15 @@ export const Sidebar = (props) => {
   // State for our sidebar
   const [open, setOpen] = useState(false);
   // Call hook passing in the ref and a function to call on outside click
-  useOnClickOutside(node, () => setOpen(false))
+  useOnClickOutside(node, () => setOpen(false));
+
+  const { pathname } = useRouter();
+  // console.log('pathname', pathname);
 
   return (
     <div ref={node}>
       <Burger open={open} setOpen={setOpen} />
-      <Menu open={open} setOpen={setOpen} />
+      <Menu pathname={pathname} open={open} setOpen={setOpen} />
     </div>
   )
 }
@@ -125,7 +127,24 @@ export const StyledMenu = styled.nav`
   z-index: 3;
 `;
 
-const Menu = ({ open }) => {
+const selected = css`
+  color: #16f533;
+  filter: drop-shadow(0px 0px 10px green);
+   > a {
+    color: #16f533!important;
+    filter: drop-shadow(0px 0px 10px green);
+  }
+
+  &::before {
+    ${'' /* content: "/ "; */}
+  }
+  &::after {
+    ${'' /* content: " /" */}
+  }
+`
+
+
+const Menu = ({ open, pathname }) => {
   return (
     <StyledMenu open={open}>
       <div>
@@ -148,13 +167,41 @@ const Menu = ({ open }) => {
           text-align: center;
           height: 50%;
           `}>
-        <div><Link href="/"><a>Home</a></Link></div>
-        <div><Link href="/about"><a>About Us</a></Link></div>
-        <div><Link href="/services"><a>Services</a></Link></div>
-        <div><Link href="/portfolio"><a>Portfolio</a></Link></div>
-        <div><Link href="/case-studies"><a>Case Studies</a></Link></div>
-        <div><Link href="/blogs"><a>Blogs</a></Link></div>
-        <div><Link href="/contact"><a>Contact Us</a></Link></div>
+        <div
+          css={css`
+            ${(pathname == "/") && selected}
+            `}
+        ><Link href="/"><a>Home</a></Link></div>
+        <div
+          css={css`
+            ${(pathname == "/about") && selected}
+            `}
+        ><Link href="/about"><a>About Us</a></Link></div>
+        <div
+          css={css`
+            ${(pathname == "/services") && selected}
+            `}
+        ><Link href="/services"><a>Services</a></Link></div>
+        <div
+          css={css`
+            ${(pathname == "/portfolio") && selected}
+            `}
+        ><Link href="/portfolio"><a>Portfolio</a></Link></div>
+        <div
+          css={css`
+            ${(pathname == "/case-studies") && selected}
+            `}
+        ><Link href="/case-studies"><a>Case Studies</a></Link></div>
+        <div
+          css={css`
+            ${(pathname == "/blogs") && selected}
+            `}
+        ><Link href="/blogs"><a>Blogs</a></Link></div>
+        <div
+          css={css`
+            ${(pathname == "/contact") && selected}
+            `}
+        ><Link href="/contact"><a>Contact Us</a></Link></div>
       </div>
       <div
         css={css`
@@ -164,10 +211,10 @@ const Menu = ({ open }) => {
           width: 100%;
             `}
       >
-        <faBrands.FacebookF css={base} size="16" />
-        <faBrands.Twitter css={base} size="16" />
-        <faBrands.LinkedinIn css={base} size="16" />
-        <faBrands.Instagram css={base} size="16" />
+        <FacebookF css={base} size="16" />
+        <Twitter css={base} size="16" />
+        <LinkedinIn css={base} size="16" />
+        <Instagram css={base} size="16" />
       </div>
     </StyledMenu>
   )

@@ -11,7 +11,7 @@ const Consulting = () => (
         css={css`
           // X-Small devices (portrait phones, less than 576px)
           display: grid;
-          grid-auto-rows: 50vh;
+          /* grid-auto-rows: 50vh; */
           
           // X-Large devices (large desktops, 1200px and up)
           @media (min-width: 1200px) {
@@ -24,7 +24,7 @@ const Consulting = () => (
             css={css`
               // X-Small devices (portrait phones, less than 576px)
               align-self: center;
-              margin-top: -3rem;
+              /* margin-top: -3rem; */
 
               // X-Large devices (large desktops, 1200px and up)
               @media (min-width: 1200px) { 
@@ -55,8 +55,9 @@ const Consulting = () => (
             <div
                 css={css`
                   // X-Small devices (portrait phones, less than 576px)
-                  padding: 0.25rem;
-                  font-size: 0.7rem;
+                  padding: 1rem;
+                  padding-top: 0;
+                  /* font-size: 0.7rem; */
                   text-align: center;
 
                   // Small devices (landscape phones, 576px and up)
@@ -93,7 +94,7 @@ const Consulting = () => (
               z-index: -1;
               align-self: center;
               justify-self: center;
-              margin-bottom: -5rem;
+              /* margin-bottom: -5rem; */
               
               @media (max-width: 320px) {
                   align-self: center;

@@ -11,7 +11,7 @@ const WhatWeDo = () => (
         css={css`
           // X-Small devices (portrait phones, less than 576px)
           display: grid;
-          grid-auto-rows: 50vh;
+          /* grid-auto-rows: 50vh; */
           
           // X-Large devices (large desktops, 1200px and up)
           @media (min-width: 1200px) {
@@ -39,12 +39,14 @@ const WhatWeDo = () => (
         <div
             css={css`
               // X-Small devices (portrait phones, less than 576px)
-              align-self: center;
-              margin-top: -5rem;
+              align-self: start;
+              /* margin-top: -5rem; */
 
               // X-Large devices (large desktops, 1200px and up)
               @media (min-width: 1200px) { 
                   /* margin-top: 0; */
+                  align-self: center;
+                  margin-top: -5rem;
                }
               `}
         >
@@ -68,10 +70,11 @@ const WhatWeDo = () => (
             <div
                 css={css`
                   // X-Small devices (portrait phones, less than 576px)
-                  padding: 0.5rem;
                   margin-bottom: 0.25rem;
-                  font-size: 0.80rem;
+                  /* font-size: 0.80rem; */
                   text-align: center;
+                  padding: 1rem;
+                  padding-top: 0.75rem;
 
                   // Small devices (landscape phones, 576px and up)
                   @media (min-width: 576px) {  }
@@ -81,7 +84,7 @@ const WhatWeDo = () => (
                           
                   // Large devices (desktops, 992px and up)
                   @media (min-width: 992px) { 
-                      font-size: 0.9rem;
+                      /* font-size: 0.9rem; */
                    }
                           
                   // X-Large devices (large desktops, 1200px and up)
@@ -116,7 +119,7 @@ const WhatWeDo = () => (
             css={css`
               // X-Small devices (portrait phones, less than 576px)
               padding: 0 10%;
-              margin-bottom: -1rem;
+              /* margin-bottom: -1rem; */
               grid-row: 1 / 2;
               z-index: -1;
               align-self: end;
@@ -124,7 +127,7 @@ const WhatWeDo = () => (
 
               // Small devices (landscape phones, 576px and up)
               @media (min-width: 576px) { 
-                  padding: 0 30%;
+                  padding: 0 10%;
                }
                           
               // Medium devices (tablets, 768px and up)

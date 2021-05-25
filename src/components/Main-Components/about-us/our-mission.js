@@ -10,7 +10,7 @@ const OurMission = () => (
         css={css`
           // X-Small devices (portrait phones, less than 576px)
           display: grid;
-          grid-auto-rows: 50vh;
+          /* grid-auto-rows: 50vh; */
           
           // X-Large devices (large desktops, 1200px and up)
           @media (min-width: 1200px) {
@@ -23,8 +23,8 @@ const OurMission = () => (
             css={css`
               // X-Small devices (portrait phones, less than 576px)
               align-self: center;
-              padding: 0.5rem;
-              margin-bottom: 5rem;
+              padding: 1rem;
+              /* margin-bottom: 5rem; */
 
               // X-Large devices (large desktops, 1200px and up)
               @media (min-width: 1200px) { 
@@ -57,7 +57,7 @@ const OurMission = () => (
                   // X-Small devices (portrait phones, less than 576px)
                   /* padding: 0.5rem; */
                   margin-bottom: 1rem;
-                  font-size: 0.80rem;
+                  /* font-size: 0.80rem; */
                   /* text-align: center; */
 
                   // Small devices (landscape phones, 576px and up)
@@ -68,7 +68,7 @@ const OurMission = () => (
                           
                   // Large devices (desktops, 992px and up)
                   @media (min-width: 992px) { 
-                      font-size: 0.9rem;
+                      /* font-size: 0.9rem; */
                    }
                           
                   // X-Large devices (large desktops, 1200px and up)
@@ -92,7 +92,7 @@ const OurMission = () => (
               grid-row: 1 / 2;
               z-index: -1;
               align-self: center;
-              margin-bottom: -5rem; 
+              /* margin-bottom: -5rem;  */
               justify-self: center;
 
               @media (max-width: 320px) {
@@ -108,7 +108,7 @@ const OurMission = () => (
                           
               // Medium devices (tablets, 768px and up)
               @media (min-width: 768px) { 
-                margin-bottom: -10rem;
+                /* margin-bottom: -10rem; */
                }
                       
               // Large devices (desktops, 992px and up)

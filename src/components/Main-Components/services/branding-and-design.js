@@ -2,15 +2,15 @@
 
 import { css, jsx } from "@emotion/react"
 import Image from "next/image"
-import { Button } from "../../Sub-Components/button"
-
+import ReadMoreReact from 'read-more-react';
 
 const BrandingAndDesign = () => (
     <div
         css={css`
           // X-Small devices (portrait phones, less than 576px)
           display: grid;
-          grid-auto-rows: 50vh;
+          /* grid-auto-rows: 50vh; */
+          /* row-gap: 2rem; */
           
           // X-Large devices (large desktops, 1200px and up)
           @media (min-width: 1200px) {
@@ -23,11 +23,11 @@ const BrandingAndDesign = () => (
             css={css`
               // X-Small devices (portrait phones, less than 576px)
               align-self: center;
-              margin-top: -5rem;
+              /* margin-top: -5rem; */
 
               // X-Large devices (large desktops, 1200px and up)
               @media (min-width: 1200px) { 
-                  /* margin-top: 5rem; */
+                  margin-top: -5rem;
                }
               `}
         >
@@ -53,8 +53,9 @@ const BrandingAndDesign = () => (
             <div
                 css={css`
                   // X-Small devices (portrait phones, less than 576px)
-                  padding: 0.5rem;
-                  font-size: 0.6rem;
+                  padding: 1rem;
+                  padding-top: 0;
+                  /* font-size: 0.6rem; */
                   text-align: center;
 
                   // Small devices (landscape phones, 576px and up)
@@ -65,7 +66,7 @@ const BrandingAndDesign = () => (
                           
                   // Large devices (desktops, 992px and up)
                   @media (min-width: 992px) { 
-                      font-size: 0.8rem;
+                      /* font-size: 0.8rem; */
                    }
                           
                   // X-Large devices (large desktops, 1200px and up)
@@ -89,7 +90,7 @@ const BrandingAndDesign = () => (
               padding: 0 25%;
               grid-row: 1 / 2;
               z-index: -1;
-              align-self: end;
+              align-self: center;
               justify-self: center;
 
               @media (max-width: 320px) {
@@ -138,7 +139,7 @@ const BrandingAndDesign = () => (
                 height={547}
             />
         </div>
-    </div>
+    </div >
 )
 
 export default BrandingAndDesign

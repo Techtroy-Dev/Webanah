@@ -5,9 +5,9 @@ import Image from "next/image"
 
 const base = css`
   display: grid;
-  grid-gap: 0.25rem;
+  grid-gap: 1rem;
   grid-template-columns: 1fr;
-  padding: 0 0.25rem;
+  padding: 0.25rem 1rem;
   @media (min-width: 1200px) {
       grid-template-columns: 1fr 1fr 1fr;
       padding: 1rem 0.25rem;
@@ -24,14 +24,14 @@ const base = css`
         padding: 0.5rem 0.25rem;
       }
       @media (min-width: 1200px) {
-        padding: 2rem 0.25rem;
+        ${'' /* padding: 0.5rem 0.25rem; */}
       }
-      border-left: 0.1rem solid grey;
-      border-right: 0.1rem solid grey;
+      border-left: 0.2rem solid grey;
+      border-right: 0.2rem solid grey;
       &:hover {
         color: #f8f8ff;
-        border-left: 0.1rem solid #16f533;
-        border-right: 0.1rem solid #16f533;
+        border-left: 0.2rem solid #16f533;
+        border-right: 0.2rem solid #16f533;
       }
       & > div {
           @media (min-width: 992px) {
@@ -40,16 +40,18 @@ const base = css`
       }
       & > div:nth-of-type(1) {
           font-family: 'Green Lantern';
-          font-size: clamp(0.7rem, -0.875rem + 8.333vw, 1.75rem);
+          font-size: clamp(1rem, -0.875rem + 8.333vw, 1.75rem);
           letter-spacing: 0.1rem;
           color: #16f533;
           /* opacity: 0.75; */
           text-align: center;
+          margin: 1rem;
       }
       & > div:nth-of-type(2) {
-          font-size: 0.8rem;
+          margin: 1rem;
+          ${'' /* font-size: 0.8rem; */}
           @media (min-width: 992px) {
-              font-size: 0.9rem;
+              ${'' /* font-size: 0.9rem; */}
               padding: 0.25;
           }
           @media (min-width: 1200px) {  }
@@ -76,13 +78,13 @@ const OurCoreValues = () => (
         <div
             css={css`
               font-family: 'Green Lantern';
-              font-size: clamp(1rem, -0.875rem + 8.333vw, 2.75rem);
+              font-size: clamp(1.5rem, -0.875rem + 8.333vw, 2.75rem);
               text-align: center;
               color: transparent;
               -webkit-text-stroke: 0.06rem #16f533;
               letter-spacing: 0.25rem;
 
-              margin-bottom: 0.25rem;
+              margin-bottom: 0.75rem;
               `}
         >
             Our Core Values

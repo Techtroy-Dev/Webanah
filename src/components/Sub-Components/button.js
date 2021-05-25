@@ -9,7 +9,7 @@ export const Button = styled.button`
   /* text-transform: uppercase; */
   font-style: italic;
   font-weight: bolder;
-  font-size: 0.75rem;
+  font-size: 1rem;
   padding: 7px;
   border-radius: 0px 10px;
   border: 1.5px solid #16f533;

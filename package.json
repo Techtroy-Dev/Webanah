@@ -25,8 +25,7 @@
         "next-i18next": "^6.0.2",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
-        "react-intersection-observer": "^8.31.1",
-        "react-scrollspy": "^3.4.3",
+        "read-more-react": "^1.0.10",
         "sqlite": "^4.0.21",
         "sqlite3": "^5.0.2"
     },

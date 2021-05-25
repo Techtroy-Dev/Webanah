@@ -10,8 +10,9 @@ const WebDevelopment = () => (
         css={css`
           // X-Small devices (portrait phones, less than 576px)
           display: grid;
-          grid-auto-rows: 50vh;
-          
+          /* grid-auto-rows: 50vh; */
+          row-gap: 1rem;
+
           // Large devices (desktops, 992px and up)
           /* @media (min-width: 992px) { 
               margin-top: 5rem;
@@ -29,7 +30,7 @@ const WebDevelopment = () => (
             css={css`
               // X-Small devices (portrait phones, less than 576px)
               align-self: center;
-              margin-top: -5rem;
+              /* margin-top: -5rem; */
 
               // X-Large devices (large desktops, 1200px and up)
               @media (min-width: 1200px) { 
@@ -61,8 +62,9 @@ const WebDevelopment = () => (
             <div
                 css={css`
                   // X-Small devices (portrait phones, less than 576px)
-                  padding: 0.5rem;
-                  font-size: 0.70rem;
+                  padding: 1rem;
+                  /* padding-top: 0; */
+                  /* font-size: 0.70rem; */
                   text-align: center;
 
                   // Small devices (landscape phones, 576px and up)
@@ -96,7 +98,7 @@ const WebDevelopment = () => (
               margin-bottom: -2rem;
               grid-row: 1 / 2;
               z-index: -1;
-              align-self: end;
+              align-self: center;
               justify-self: center;
 
               @media (max-width: 320px) {
