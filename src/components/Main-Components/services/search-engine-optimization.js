@@ -4,14 +4,15 @@ import { Search } from "@emotion-icons/fa-solid"
 import { css, jsx } from "@emotion/react"
 import Image from "next/image"
 import { Button } from "../../Sub-Components/button"
-
+import ShowMoreText from 'react-show-more-text';
 
 const SearchEngineOptimization = () => (
     <div
         css={css`
           // X-Small devices (portrait phones, less than 576px)
           display: grid;
-          grid-auto-rows: 50vh;
+          /* grid-auto-rows: 50vh; */
+          row-gap: 1rem;
           
           // X-Large devices (large desktops, 1200px and up)
           @media (min-width: 1200px) {
@@ -24,7 +25,7 @@ const SearchEngineOptimization = () => (
             css={css`
               // X-Small devices (portrait phones, less than 576px)
               align-self: center;
-              margin-top: -5rem;
+              /* margin-top: -5rem; */
 
               // X-Large devices (large desktops, 1200px and up)
               @media (min-width: 1200px) { 
@@ -54,8 +55,9 @@ const SearchEngineOptimization = () => (
             <div
                 css={css`
                   // X-Small devices (portrait phones, less than 576px)
-                  padding: 0.5rem;
-                  font-size: 0.70rem;
+                  padding: 1rem;
+                  padding-top: 0;
+                  /* font-size: 0.70rem; */
                   text-align: center;
 
                   // Small devices (landscape phones, 576px and up)
@@ -66,7 +68,7 @@ const SearchEngineOptimization = () => (
                           
                   // Large devices (desktops, 992px and up)
                   @media (min-width: 992px) { 
-                      font-size: 0.8rem;
+                      /* font-size: 0.8rem; */
                    }
                           
                   // X-Large devices (large desktops, 1200px and up)
@@ -80,8 +82,12 @@ const SearchEngineOptimization = () => (
                   @media (min-width: 1400px) {  }
                   `}
             >
-                <p>While the best SEO strategies are research-driven, SEO is still a long way from an accurate science. In any case, there are sure some specific strategies you can hope to get from any advanced organization. Because of the differing levels of performance, and ranges of abilities in the business, outcomes, and ROI will fluctuate from one organization to another. In addition, an effective SEO organization should truly comprehend your business and examine your industry to accumulate working information on your topic.</p>
-                <p>Webanah has marketing professionals that perform detailed research and craft such promotional strategies that will take your business up a notch, based on the results of the research. SEO audit, competitor analysis, Link building, on-page SEO, off page SEO, technical SEO, keyword research everything your website needs, Webanah has the potential to deal with it efficiently and provides monthly report to the clients to keep them updated about the progress.</p>
+                <ShowMoreText
+                    lines={4}
+                    anchorClass="show-more-button">
+                    <p>While the best SEO strategies are research-driven, SEO is still a long way from an accurate science. In any case, there are sure some specific strategies you can hope to get from any advanced organization. Because of the differing levels of performance, and ranges of abilities in the business, outcomes, and ROI will fluctuate from one organization to another. In addition, an effective SEO organization should truly comprehend your business and examine your industry to accumulate working information on your topic.</p>
+                    <p>Webanah has marketing professionals that perform detailed research and craft such promotional strategies that will take your business up a notch, based on the results of the research. SEO audit, competitor analysis, Link building, on-page SEO, off page SEO, technical SEO, keyword research everything your website needs, Webanah has the potential to deal with it efficiently and provides monthly report to the clients to keep them updated about the progress.</p>
+                </ShowMoreText>
             </div>
         </div>
         <div
@@ -90,7 +96,7 @@ const SearchEngineOptimization = () => (
               padding: 0 25%;
               grid-row: 1 / 2;
               z-index: -1;
-              align-self: end;
+              align-self: center;
               justify-self: center;
               padding: 0 35%;
 

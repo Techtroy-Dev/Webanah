@@ -164,14 +164,14 @@ function Form() {
                       grid-template-columns: 1fr 1fr 1fr;
                   }
                   grid-gap: 1rem;
-                  padding: 0 0.5rem;
+                  padding: 1rem;
                   /* margin-bottom: 1rem; */`}>
                 <form onSubmit={onSubmit}
                     ref={formRef}
                     css={css`
                       position: relative;
                       z-index: 1;
-                      padding: 1rem;
+                      padding: 0.5rem;
                       display: grid;
                       grid-column: 1 / 3;
                       grid-row: 1 / 2;
@@ -335,8 +335,10 @@ function Form() {
                           /* margin-top: 1rem; */
                           margin-bottom: 1rem;
                           flex-direction: column;
+                          height: 25rem;
                           @media (min-width: 1200px) {
                             flex-direction: row;
+                            height: auto;
                           }
                           justify-content: space-between;
                           align-items: center;
@@ -346,10 +348,13 @@ function Form() {
                           padding: 0.25rem 0;
                           & > div {
                           text-align: center;
+                          display: flex;
+                          flex-direction: column;
+                          justify-content: center;
                           /* border: 0.05rem solid grey; */
                           flex: 1;
                             > div {
-                                padding-top: 0.25rem;
+                                padding-top: 0.5rem;
                             }
                           &:hover {
                               /* border: 0.05rem solid #16f533; */

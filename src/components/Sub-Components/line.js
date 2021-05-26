@@ -17,6 +17,9 @@ export const LeftLine = styled.div`
   transform: translateX(-50%);
   flex-direction: row;
   width: 70%;
+  @media (max-width: 991.98px) {
+    display: none;
+  }
   @media (min-width: 1200px) {
     top: 25%;
     left: 3%;
@@ -62,6 +65,9 @@ export const BottomLine = styled.div`
   z-index: 1;
   width: 90vw;
   justify-content: space-evenly;
+  @media (max-width: 991.98px) {
+    display: none;
+  }
   @media (min-width: 1200px) {
     width: 80vw;
     justify-content: space-between;

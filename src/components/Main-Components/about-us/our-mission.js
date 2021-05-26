@@ -2,7 +2,7 @@
 
 import { css, jsx } from "@emotion/react"
 import Image from "next/image"
-import { Button } from "../../Sub-Components/button"
+import ShowMoreText from 'react-show-more-text';
 
 
 const OurMission = () => (
@@ -10,7 +10,7 @@ const OurMission = () => (
         css={css`
           // X-Small devices (portrait phones, less than 576px)
           display: grid;
-          grid-auto-rows: 50vh;
+          /* grid-auto-rows: 50vh; */
           
           // X-Large devices (large desktops, 1200px and up)
           @media (min-width: 1200px) {
@@ -23,8 +23,8 @@ const OurMission = () => (
             css={css`
               // X-Small devices (portrait phones, less than 576px)
               align-self: center;
-              padding: 0.5rem;
-              margin-bottom: 5rem;
+              padding: 1rem;
+              /* margin-bottom: 5rem; */
 
               // X-Large devices (large desktops, 1200px and up)
               @media (min-width: 1200px) { 
@@ -57,7 +57,7 @@ const OurMission = () => (
                   // X-Small devices (portrait phones, less than 576px)
                   /* padding: 0.5rem; */
                   margin-bottom: 1rem;
-                  font-size: 0.80rem;
+                  /* font-size: 0.80rem; */
                   /* text-align: center; */
 
                   // Small devices (landscape phones, 576px and up)
@@ -68,7 +68,7 @@ const OurMission = () => (
                           
                   // Large devices (desktops, 992px and up)
                   @media (min-width: 992px) { 
-                      font-size: 0.9rem;
+                      /* font-size: 0.9rem; */
                    }
                           
                   // X-Large devices (large desktops, 1200px and up)
@@ -81,8 +81,12 @@ const OurMission = () => (
                   @media (min-width: 1400px) {  }
                   `}
             >
-                <p>Webanah is your ultimate business savior. The sole mission of Webanah is to help small and large businesses to grow online with better marketing and ROI. Our professional team tracks every marketing activity that your business follows and eliminates needless strategies. We design effective promotional strategies that increase the traffic towards your business website through detailed research. We crawl deep into the statistics of your target market, niche, and opportunities to create effective strategies that would help your business to grow its online presence.</p>
-                <p>And to gain that boost in your business we have a team of professional team of developers on board to design your website, apps and provide social media marketing. Our mission is to turn your business in to a brand and position it into customer’s mind through effective promotional strategies.</p>
+                <ShowMoreText
+                    lines={4}
+                    anchorClass="show-more-button">
+                    <p>Webanah is your ultimate business savior. The sole mission of Webanah is to help small and large businesses to grow online with better marketing and ROI. Our professional team tracks every marketing activity that your business follows and eliminates needless strategies. We design effective promotional strategies that increase the traffic towards your business website through detailed research. We crawl deep into the statistics of your target market, niche, and opportunities to create effective strategies that would help your business to grow its online presence.</p>
+                    <p>And to gain that boost in your business we have a team of professional team of developers on board to design your website, apps and provide social media marketing. Our mission is to turn your business in to a brand and position it into customer’s mind through effective promotional strategies.</p>
+                </ShowMoreText>
             </div>
         </div>
         <div
@@ -92,7 +96,7 @@ const OurMission = () => (
               grid-row: 1 / 2;
               z-index: -1;
               align-self: center;
-              margin-bottom: -5rem; 
+              /* margin-bottom: -5rem;  */
               justify-self: center;
 
               @media (max-width: 320px) {
@@ -108,7 +112,7 @@ const OurMission = () => (
                           
               // Medium devices (tablets, 768px and up)
               @media (min-width: 768px) { 
-                margin-bottom: -10rem;
+                /* margin-bottom: -10rem; */
                }
                       
               // Large devices (desktops, 992px and up)

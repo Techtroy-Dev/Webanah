@@ -2,9 +2,9 @@
 
 import { css, jsx } from "@emotion/react";
 import Image from "next/image"
-import styled from "@emotion/styled"
 import Link from "next/link";
 import { Button } from "../../Sub-Components/button"
+import ShowMoreText from 'react-show-more-text';
 
 const Home = () => (
     <div
@@ -39,12 +39,13 @@ const Home = () => (
         <div
             css={css`
               // X-Small devices (portrait phones, less than 576px)
-              align-self: center;
-              margin-top: -7.5rem;
+              align-self: start;
+              /* margin-top: -7.5rem; */
 
               // X-Large devices (large desktops, 1200px and up)
               @media (min-width: 1200px) { 
                   margin-top: -5rem;
+                  align-self: center;
                }
               `}
         >
@@ -61,13 +62,19 @@ const Home = () => (
             <div
                 css={css`
                   // X-Small devices (portrait phones, less than 576px)
-                  padding: 0 15%;
+                  padding: 0 5%;
                   margin-bottom: -1rem;
-                  margin-left: -2.5rem;
+
+                  // Medium devices (tablets, 768px and up)
+                  @media (min-width: 768px) { 
+                      margin-top: -5rem;
+                   }
 
                   // X-Large devices (large desktops, 1200px and up)
                   @media (min-width: 1200px) { 
-                      padding: 0;
+                      padding: 0 15%;
+                      margin-left: -7rem;
+                      margin-top: 0;
                       }
             `}>
                 <Image
@@ -81,10 +88,12 @@ const Home = () => (
             <div
                 css={css`
                   // X-Small devices (portrait phones, less than 576px)
-                  padding: 0 0.5rem;
-                  margin-bottom: 0.25rem;
-                  font-size: 0.80rem;
+                  /* font-size: 0.80rem; */
                   text-align: center;
+                  padding: 1rem;
+                  padding-top: 0;
+                  margin-bottom: 0.25rem;
+
 
                   // Small devices (landscape phones, 576px and up)
                   @media (min-width: 576px) {  }
@@ -95,7 +104,6 @@ const Home = () => (
                   // Large devices (desktops, 992px and up)
                   @media (min-width: 992px) { 
                       font-size: 0.9rem;
-                      margin-bottom: 1rem;
                    }
                           
                   // X-Large devices (large desktops, 1200px and up)
@@ -109,7 +117,11 @@ const Home = () => (
                   @media (min-width: 1400px) {  }
                   `}
             >
-                Webanah is your ultimate fantasy that has come alive. Your dream of having an established and attractive website design for your business with commendable online performance and abundant revenue is Webanah’s food for soul. Webanah use your dream to energize its webanarians who make your brand rule the online universe with engaging design, unparallel digital marketing strategies and position it to the throne of search engines' highest rank.
+                <ShowMoreText
+                    lines={4}
+                    anchorClass="show-more-button">
+                    Webanah is your ultimate fantasy that has come alive. Your dream of having an established and attractive website design for your business with commendable online performance and abundant revenue is Webanah’s food for soul. Webanah use your dream to energize its webanarians who make your brand rule the online universe with engaging design, unparallel digital marketing strategies and position it to the throne of search engines' highest rank.
+                    </ShowMoreText>
             </div>
             <div
                 css={css`
@@ -129,10 +141,11 @@ const Home = () => (
             css={css`
               // X-Small devices (portrait phones, less than 576px)
               /* padding: 0 5%; */
-              margin-bottom: -30.5vh;
+              margin-bottom: -20.5vh;
+              margin-right: -5rem;
               grid-row: 1 / 2;
               z-index: -1;
-              align-self: center;
+              align-self: end;
               justify-self: center;
 
               // Small devices (landscape phones, 576px and up)
@@ -148,6 +161,7 @@ const Home = () => (
               @media (min-width: 1200px) { 
                   margin-bottom: 0;
                   grid-column: 2 / 3;
+                  align-self: start;
                }
                       
               // XX-Large devices (larger desktops, 1400px and up)

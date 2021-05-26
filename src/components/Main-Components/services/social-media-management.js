@@ -4,14 +4,15 @@ import { Search } from "@emotion-icons/fa-solid"
 import { css, jsx } from "@emotion/react"
 import Image from "next/image"
 import { Button } from "../../Sub-Components/button"
-
+import ShowMoreText from 'react-show-more-text';
 
 const SocialMediaManagement = () => (
     <div
         css={css`
           // X-Small devices (portrait phones, less than 576px)
           display: grid;
-          grid-auto-rows: 50vh;
+          /* grid-auto-rows: 50vh; */
+          row-gap: 1rem;
           
           // X-Large devices (large desktops, 1200px and up)
           @media (min-width: 1200px) {
@@ -24,11 +25,11 @@ const SocialMediaManagement = () => (
             css={css`
               // X-Small devices (portrait phones, less than 576px)
               align-self: center;
-              margin-top: -5rem;
+              /* margin-top: -5rem; */
 
               // X-Large devices (large desktops, 1200px and up)
               @media (min-width: 1200px) { 
-                  /* margin-top: 5rem; */
+                  margin-top: -5rem;
                   margin-right: -4rem;
                }
               `}
@@ -55,8 +56,9 @@ const SocialMediaManagement = () => (
             <div
                 css={css`
                   // X-Small devices (portrait phones, less than 576px)
-                  padding: 0.5rem;
-                  font-size: 0.70rem;
+                  padding: 1rem;
+                  padding-top: 0;
+                  /* font-size: 0.70rem; */
                   text-align: center;
 
                   // Small devices (landscape phones, 576px and up)
@@ -67,7 +69,7 @@ const SocialMediaManagement = () => (
                           
                   // Large devices (desktops, 992px and up)
                   @media (min-width: 992px) { 
-                      font-size: 0.8rem;
+                      /* font-size: 0.8rem; */
                    }
                           
                   // X-Large devices (large desktops, 1200px and up)
@@ -81,8 +83,12 @@ const SocialMediaManagement = () => (
                   @media (min-width: 1400px) {  }
                   `}
             >
-                <p>With an exceptional recommendation score by our trusted clients, Webanah is an extremely trustworthy choice for our clients to reach out for their social media management needs. Should you choose to avail of our services, we ensure that the company will help you improve your brand's awareness, revenue, customer loyalty, and more. More than 70% of customers resort to social media while purchasing through an online business. Whether you are familiar with your target audience and their demographics, our team of social media managers will take care of every aspect of your content and lead your strategy with an optimistic approach.</p>
-                <p>You will be provided an expert social media accountant who would not only handle the posting but also research to find out and design attractive content for your account with our expert designers. And also design a customized social media strategy that would elevate your presence at the platforms. Reach out to us if you want Webanah churn your social media and extract out the best from it.</p>
+                <ShowMoreText
+                    lines={4}
+                    anchorClass="show-more-button">
+                    <p>With an exceptional recommendation score by our trusted clients, Webanah is an extremely trustworthy choice for our clients to reach out for their social media management needs. Should you choose to avail of our services, we ensure that the company will help you improve your brand's awareness, revenue, customer loyalty, and more. More than 70% of customers resort to social media while purchasing through an online business. Whether you are familiar with your target audience and their demographics, our team of social media managers will take care of every aspect of your content and lead your strategy with an optimistic approach.</p>
+                    <p>You will be provided an expert social media accountant who would not only handle the posting but also research to find out and design attractive content for your account with our expert designers. And also design a customized social media strategy that would elevate your presence at the platforms. Reach out to us if you want Webanah churn your social media and extract out the best from it.</p>
+                </ShowMoreText>
             </div>
         </div>
         <div
@@ -92,7 +98,7 @@ const SocialMediaManagement = () => (
               /* margin-bottom: -5rem; */
               grid-row: 1 / 2;
               z-index: -1;
-              align-self: end;
+              align-self: center;
               justify-self: center;
 
               /* @media (max-width: 320px) { 

@@ -2,7 +2,7 @@
 
 import { css, jsx } from "@emotion/react"
 import Image from "next/image"
-import { Button } from "../../Sub-Components/button"
+import ShowMoreText from 'react-show-more-text';
 
 
 const BrandingAndDesign = () => (
@@ -10,7 +10,8 @@ const BrandingAndDesign = () => (
         css={css`
           // X-Small devices (portrait phones, less than 576px)
           display: grid;
-          grid-auto-rows: 50vh;
+          /* grid-auto-rows: 50vh; */
+          /* row-gap: 2rem; */
           
           // X-Large devices (large desktops, 1200px and up)
           @media (min-width: 1200px) {
@@ -23,11 +24,11 @@ const BrandingAndDesign = () => (
             css={css`
               // X-Small devices (portrait phones, less than 576px)
               align-self: center;
-              margin-top: -5rem;
+              /* margin-top: -5rem; */
 
               // X-Large devices (large desktops, 1200px and up)
               @media (min-width: 1200px) { 
-                  /* margin-top: 5rem; */
+                  margin-top: -5rem;
                }
               `}
         >
@@ -53,8 +54,9 @@ const BrandingAndDesign = () => (
             <div
                 css={css`
                   // X-Small devices (portrait phones, less than 576px)
-                  padding: 0.5rem;
-                  font-size: 0.6rem;
+                  padding: 1rem;
+                  padding-top: 0;
+                  /* font-size: 0.6rem; */
                   text-align: center;
 
                   // Small devices (landscape phones, 576px and up)
@@ -65,7 +67,7 @@ const BrandingAndDesign = () => (
                           
                   // Large devices (desktops, 992px and up)
                   @media (min-width: 992px) { 
-                      font-size: 0.8rem;
+                      /* font-size: 0.8rem; */
                    }
                           
                   // X-Large devices (large desktops, 1200px and up)
@@ -79,8 +81,12 @@ const BrandingAndDesign = () => (
                   @media (min-width: 1400px) {  }
                   `}
             >
-                <p>Having a unique identity that is positioned into audience’s mind be it an enticing logo, attractive color palette or catchy taglines and headlines, merchandise, ATL and BTL activities all fall under branding and design department. Webanah is a leading branding and design company with an exceptional design team that creates original, intriguing, and innovative designs that capture the essence of your brand. The team’s designs help our customers in maximizing their revenues and engagement. In the modern world, your designs are your first interaction with your potential clients, making your designs the most important part of your company’s overview.</p>
-                <p>Reach out to us for the absolute best to work on your company’s needs. Our clients can count on total transparency from us, as our team appreciates our clients’ input in making the final product better than the initial drafts. Hundreds of clients choose to trust us with their everyday designing needs. Waste no time and reach out to get the best team of designers working for you in no time.</p>
+                <ShowMoreText
+                    lines={4}
+                    anchorClass="show-more-button">
+                    <p>Having a unique identity that is positioned into audience’s mind be it an enticing logo, attractive color palette or catchy taglines and headlines, merchandise, ATL and BTL activities all fall under branding and design department. Webanah is a leading branding and design company with an exceptional design team that creates original, intriguing, and innovative designs that capture the essence of your brand. The team’s designs help our customers in maximizing their revenues and engagement. In the modern world, your designs are your first interaction with your potential clients, making your designs the most important part of your company’s overview.</p>
+                    <p>Reach out to us for the absolute best to work on your company’s needs. Our clients can count on total transparency from us, as our team appreciates our clients’ input in making the final product better than the initial drafts. Hundreds of clients choose to trust us with their everyday designing needs. Waste no time and reach out to get the best team of designers working for you in no time.</p>
+                </ShowMoreText>
             </div>
         </div>
         <div
@@ -89,7 +95,7 @@ const BrandingAndDesign = () => (
               padding: 0 25%;
               grid-row: 1 / 2;
               z-index: -1;
-              align-self: end;
+              align-self: center;
               justify-self: center;
 
               @media (max-width: 320px) {

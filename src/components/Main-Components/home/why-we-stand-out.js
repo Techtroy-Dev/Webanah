@@ -8,11 +8,16 @@ const base = css`
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-rows: 1fr;
-  grid-gap: 0.5rem;
-  padding: 0.5rem;
+  grid-gap: 1rem;
+  padding: 1.5rem;
+  padding-top: 0.75rem;
   
   @media (min-width: 768px) {
       grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 992px) {
+      grid-gap: 0.5rem;
   }
   
   @media (min-width: 1200px) {
@@ -30,12 +35,12 @@ const base = css`
       background-position: center;
       background-size: cover;
       ${'' /* padding: 2rem 0; */}
-      border-left: 0.1rem solid grey;
-      border-right: 0.1rem solid grey;
+      border-left: 0.2rem solid grey;
+      border-right: 0.2rem solid grey;
       &:hover {
         color: #f8f8ff;
-        border-left: 0.1rem solid #16f533;
-        border-right: 0.1rem solid #16f533;
+        border-left: 0.2rem solid #16f533;
+        border-right: 0.2rem solid #16f533;
       }
       > div {
           padding: 0.25rem;
@@ -46,13 +51,16 @@ const base = css`
       > div:nth-of-type(2) {
           font-family: 'Green Lantern';
           color: #16f533;
-          font-size: 0.9rem;
+          ${'' /* font-size: 0.9rem; */}
           letter-spacing: 0.1rem;
       }
       > div:nth-of-type(3) {
           ${'' /* letter-spacing: 0.1rem; */}
           ${'' /* line-height: 1.4rem; */}
-          font-size: 0.90rem;
+          ${'' /* font-size: 0.90rem; */}
+          padding: 0.5rem 1rem;
+          padding-top: 0;
+
       }
   }
 `
@@ -62,7 +70,7 @@ const WhyWeStandOut = () => (
         css={css`
           /* padding-right: 10rem; */
           /* margin: 1rem 2rem; */
-          margin-top: 8rem;
+          /* margin-top: 8rem; */
           @media (min-width: 1200px) {
               /* margin: 0rem; */
               margin-top: 2.5rem;
@@ -79,7 +87,7 @@ const WhyWeStandOut = () => (
               font-size: clamp(1.5rem, -0.875rem + 8.333vw, 2.75rem);
               letter-spacing: 0.25rem;
               @media (min-width: 768px) {
-                margin-bottom: 2rem;
+                /* margin-bottom: 2rem; */
               }
               `}
         >

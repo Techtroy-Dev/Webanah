@@ -10,11 +10,17 @@ const BuildTheBestExperience = () => (
         css={css`
           // X-Small devices (portrait phones, less than 576px)
           display: grid;
-          grid-auto-rows: 50vh;
-          background: linear-gradient(to top, #01102a 10%, transparent 90%);
+          grid-template-rows: repeat(6, 1fr);
+          /* grid-auto-rows: 50vh; */
+          background: linear-gradient(to top, transparent 0%, #01102a 30%, transparent 90%);
 
           // Medium devices (tablets, 768px and up)
           @media (min-width: 768px) { 
+              /* background: none; */
+              background: linear-gradient(to top, transparent 0%, #01102a 3%, transparent 70%);
+           }
+
+           @media (min-width: 992px) { 
               background: none;
            }
           
@@ -22,6 +28,7 @@ const BuildTheBestExperience = () => (
           @media (min-width: 1200px) {
               grid-template-columns: 1fr 1fr;
               grid-auto-rows: 100vh;
+              grid-template-rows: auto;
               }
           `}
     >
@@ -29,14 +36,19 @@ const BuildTheBestExperience = () => (
             css={css`
               // X-Small devices (portrait phones, less than 576px)
               align-self: center;
-              padding: 0.5rem;
-              margin-bottom: 7.5rem;
+              padding: 1rem;
+              grid-row: 2 / 7;
+              grid-column: 1;
+              /* margin-bottom: 7.5rem; */
+              /* margin-top: -40rem; */
 
               // X-Large devices (large desktops, 1200px and up)
               @media (min-width: 1200px) { 
                   margin-left: -6rem;
                   padding: 0;
-                  margin-bottom: 0;
+                  margin-top: 0;
+                  grid-row: 1 / 2;
+                  grid-column: 2 / 3;
                }
               `}
         >
@@ -64,7 +76,7 @@ const BuildTheBestExperience = () => (
                   // X-Small devices (portrait phones, less than 576px)
                   /* padding: 0.5rem; */
                   /* margin-bottom: 1rem; */
-                  font-size: 0.80rem;
+                  /* font-size: 0.80rem; */
                   /* text-align: center; */
 
                   // Small devices (landscape phones, 576px and up)
@@ -95,10 +107,11 @@ const BuildTheBestExperience = () => (
             css={css`
               // X-Small devices (portrait phones, less than 576px)
               padding: 0 10%;
-              margin-top: 5rem;
+              /* margin-top: 5rem; */
               /* opacity: 0.5; */
               margin-right: -5rem;
-              grid-row: 1 / 2;
+              grid-row: 1 / 6;
+              grid-column: 1;
               z-index: -1;
               align-self: start;
               justify-self: center;
@@ -115,6 +128,7 @@ const BuildTheBestExperience = () => (
               // X-Large devices (large desktops, 1200px and up)
               @media (min-width: 1200px) { 
                   grid-column: 1 / 2;
+                  grid-row: 1 / 2;
                   padding: 0 20%;
                   margin-top: 0;
                   margin-right: 0;

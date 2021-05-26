@@ -15,6 +15,7 @@ const LetsWorkTogether = () => (
         <div
             css={css`
               text-align: center;
+              padding: 1rem;
           `}
         >
             <div
@@ -30,11 +31,12 @@ const LetsWorkTogether = () => (
             </div>
             <div
                 css={css`
-                  padding: 1rem 0.25rem;
-                  font-size: 0.8rem;
+                  /* padding: 1rem; */
+                  margin: 1rem 0 2rem;
+                  /* font-size: 0.8rem; */
                   @media (min-width: 1200px) {
                       padding: 1rem 5rem 2rem;
-                      font-size: 0.9rem;
+                      /* font-size: 0.9rem; */
                   }
               `}
             >

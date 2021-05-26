@@ -11,10 +11,15 @@ const BusinessGrowthAgency = () => (
           // X-Small devices (portrait phones, less than 576px)
           display: grid;
           grid-auto-rows: 50vh;
-          background: linear-gradient(to top, #01102a 10%, transparent 90%);
+          background: linear-gradient(to top, transparent -7%, #01102a 3%, transparent 50%);
+          /* background: linear-gradient(to top, #01102a 10%, transparent 90%); */
 
           // Medium devices (tablets, 768px and up)
           @media (min-width: 768px) { 
+              /* background: none; */
+           }
+
+           @media (min-width: 992px) { 
               background: none;
            }
 
@@ -44,12 +49,12 @@ const BusinessGrowthAgency = () => (
             css={css`
               // X-Small devices (portrait phones, less than 576px)
               align-self: center;
-              margin-top: -5rem;
+              /* margin-top: -17.5rem; */
 
               // X-Large devices (large desktops, 1200px and up)
               @media (min-width: 1200px) {
                   margin-right: -3rem;
-                  /* margin-top: 5rem; */
+                  margin-top: -5rem;
               }
               `}
         >
@@ -62,6 +67,9 @@ const BusinessGrowthAgency = () => (
                   opacity: 0.75;
                   letter-spacing: 0.1rem;
                   text-align: center;
+                  @media (min-width: 320px) { 
+                      margin-top: -4rem;
+                   }
 
                   // X-Large devices (large desktops, 1200px and up)
                   @media (min-width: 1200px) { 
@@ -75,9 +83,10 @@ const BusinessGrowthAgency = () => (
             <div
                 css={css`
                   // X-Small devices (portrait phones, less than 576px)
-                  padding: 0.5rem;
-                  margin-bottom: 1rem;
-                  font-size: 0.90rem;
+                  padding: 1rem;
+                  padding-top: 0.75rem;
+                  margin-bottom: 0.25rem;
+                  /* font-size: 0.90rem; */
                   text-align: center;
 
                   // Small devices (landscape phones, 576px and up)
@@ -124,6 +133,9 @@ const BusinessGrowthAgency = () => (
               z-index: -1;
               align-self: start;
               justify-self: center;
+              position: relative;
+              width: 100%;
+              height: 160%;
 
               // Small devices (landscape phones, 576px and up)
               @media (min-width: 576px) {  }
@@ -138,8 +150,10 @@ const BusinessGrowthAgency = () => (
               @media (min-width: 1200px) { 
                   grid-column: 2 / 3;
                   padding: 0 10%;
-                  margin-top: 20rem;
+                  margin-top: 10rem;
                   align-self: center;
+                  width: 60%;
+                  height: 100%;
                }
                       
               // XX-Large devices (larger desktops, 1400px and up)
@@ -148,9 +162,11 @@ const BusinessGrowthAgency = () => (
         >
             <Image
                 src="/images/webanah-character4.png"
-                layout="intrinsic"
-                width={726}
-                height={1373}
+                layout="fill"
+                objectFit="cover"
+                objectPosition="top"
+            // width={726}
+            // height={1373}
             />
         </div>
 

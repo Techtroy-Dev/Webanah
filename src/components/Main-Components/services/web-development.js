@@ -3,15 +3,16 @@
 import { css, jsx } from "@emotion/react"
 import Image from "next/image"
 import { Button } from "../../Sub-Components/button"
-
+import ShowMoreText from 'react-show-more-text';
 
 const WebDevelopment = () => (
     <div
         css={css`
           // X-Small devices (portrait phones, less than 576px)
           display: grid;
-          grid-auto-rows: 50vh;
-          
+          /* grid-auto-rows: 50vh; */
+          row-gap: 1rem;
+
           // Large devices (desktops, 992px and up)
           /* @media (min-width: 992px) { 
               margin-top: 5rem;
@@ -29,7 +30,7 @@ const WebDevelopment = () => (
             css={css`
               // X-Small devices (portrait phones, less than 576px)
               align-self: center;
-              margin-top: -5rem;
+              /* margin-top: -5rem; */
 
               // X-Large devices (large desktops, 1200px and up)
               @media (min-width: 1200px) { 
@@ -61,8 +62,9 @@ const WebDevelopment = () => (
             <div
                 css={css`
                   // X-Small devices (portrait phones, less than 576px)
-                  padding: 0.5rem;
-                  font-size: 0.70rem;
+                  padding: 1rem;
+                  /* padding-top: 0; */
+                  /* font-size: 0.70rem; */
                   text-align: center;
 
                   // Small devices (landscape phones, 576px and up)
@@ -86,7 +88,11 @@ const WebDevelopment = () => (
                   @media (min-width: 1400px) {  }
                   `}
             >
-                Webanah is a full-stack developing company with extensive research in the field. With several services available like developing websites, web applications, web portals, APIs, and Ecommerce websites, we have had an outstanding reputation among its clients for impressive output and on-time delivery. Web development deals in scaling, designing, integrating, and maintaining software that works through the internet or intranet the team offers competency in the latest language versions, frameworks, innovative tech designs, and AI. Web applications constructed by us tend to serve complexity and increasing number of users due to their modular architectural designs, cloud resources, and messaging. With your apps being developed by experts in both front and back-end patterns, the website/app is also modifiable and can easily adapt to layered or modular architecture. Client recommendation is something Webanah takes pride in because of our several innovative web designs thriving on the internet for your esteemed clients. Trust us with our next project to know just how good our team is.
+                <ShowMoreText
+                    lines={4}
+                    anchorClass="show-more-button">
+                    Webanah is a full-stack developing company with extensive research in the field. With several services available like developing websites, web applications, web portals, APIs, and Ecommerce websites, we have had an outstanding reputation among its clients for impressive output and on-time delivery. Web development deals in scaling, designing, integrating, and maintaining software that works through the internet or intranet the team offers competency in the latest language versions, frameworks, innovative tech designs, and AI. Web applications constructed by us tend to serve complexity and increasing number of users due to their modular architectural designs, cloud resources, and messaging. With your apps being developed by experts in both front and back-end patterns, the website/app is also modifiable and can easily adapt to layered or modular architecture. Client recommendation is something Webanah takes pride in because of our several innovative web designs thriving on the internet for your esteemed clients. Trust us with our next project to know just how good our team is.
+    </ShowMoreText>
             </div>
         </div>
         <div
@@ -96,7 +102,7 @@ const WebDevelopment = () => (
               margin-bottom: -2rem;
               grid-row: 1 / 2;
               z-index: -1;
-              align-self: end;
+              align-self: center;
               justify-self: center;
 
               @media (max-width: 320px) {

@@ -3,6 +3,7 @@
 import { css, jsx } from "@emotion/react"
 import Image from "next/image"
 import { Button } from "../../Sub-Components/button"
+import ShowMoreText from 'react-show-more-text';
 
 
 const ContentProduction = () => (
@@ -10,7 +11,8 @@ const ContentProduction = () => (
         css={css`
           // X-Small devices (portrait phones, less than 576px)
           display: grid;
-          grid-auto-rows: 50vh;
+          /* grid-auto-rows: 50vh; */
+          row-gap: 1rem;
           /* margin-top: 1rem; */
           
           // X-Large devices (large desktops, 1200px and up)
@@ -24,7 +26,7 @@ const ContentProduction = () => (
             css={css`
               // X-Small devices (portrait phones, less than 576px)
               align-self: center;
-              margin-bottom: 7rem;
+              /* margin-bottom: 7rem; */
 
               // Large devices (desktops, 992px and up)
               @media (min-width: 992px) { 
@@ -59,8 +61,9 @@ const ContentProduction = () => (
             <div
                 css={css`
                   // X-Small devices (portrait phones, less than 576px)
-                  padding: 0.5rem;
-                  font-size: 0.6rem;
+                  padding: 1rem;
+                  padding-top: 0;
+                  /* font-size: 0.6rem; */
                   text-align: center;
 
                   // Small devices (landscape phones, 576px and up)
@@ -83,8 +86,12 @@ const ContentProduction = () => (
                   @media (min-width: 1400px) {  }
                   `}
             >
-                <p>Content decides whether your website will rank better on a search engine or not? Unique content marketing that entices customers as well as ranks high on google is something Webanah is proudly an expert in. Our team at Webanah wants to generate tangible changes for your business by creating the best possible content that may be required in your social media run.  The experts present here to ensure quality in their final products by keeping them one hundred percent unique. Engage with potential customers by using our special and on-brand social media content like custom images, thumbnails, social media posts, website content, and more.</p>
-                <p>Webanah takes pride in our track record of satisfied customers and on-time delivery of content. The output by our experts is genuine and our experts provide our clients with data points that can further help in making their engagement better. So, if you are looking to revolutionize your brand with captivating content then reach out to use for immediate assistance and effectiveness.</p>
+                <ShowMoreText
+                    lines={4}
+                    anchorClass="show-more-button">
+                    <p>Content decides whether your website will rank better on a search engine or not? Unique content marketing that entices customers as well as ranks high on google is something Webanah is proudly an expert in. Our team at Webanah wants to generate tangible changes for your business by creating the best possible content that may be required in your social media run.  The experts present here to ensure quality in their final products by keeping them one hundred percent unique. Engage with potential customers by using our special and on-brand social media content like custom images, thumbnails, social media posts, website content, and more.</p>
+                    <p>Webanah takes pride in our track record of satisfied customers and on-time delivery of content. The output by our experts is genuine and our experts provide our clients with data points that can further help in making their engagement better. So, if you are looking to revolutionize your brand with captivating content then reach out to use for immediate assistance and effectiveness.</p>
+                </ShowMoreText>
             </div>
         </div>
         <div
@@ -93,7 +100,7 @@ const ContentProduction = () => (
               padding: 0 25%;
               grid-row: 1 / 2;
               z-index: -1;
-              align-self: end;
+              align-self: center;
               justify-self: center;
 
               @media (max-width: 320px) {

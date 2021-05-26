@@ -2,19 +2,23 @@
 
 import { css, jsx } from "@emotion/react"
 import Image from "next/image"
-import Link from "next/link"
-import { Button } from "../../Sub-Components/button"
 
 const AboutUs = () => (
     <div
         css={css`
           // X-Small devices (portrait phones, less than 576px)
           display: grid;
-          grid-auto-rows: 50vh;
-          background: linear-gradient(to top, #01102a 10%, transparent 90%);
+          grid-template-rows: repeat(6, 1fr);
+          /* grid-auto-rows: 50vh; */
+          background: linear-gradient(to top, #01102a 0%, transparent 90%);
 
           // Medium devices (tablets, 768px and up)
           @media (min-width: 768px) { 
+              /* background: none; */
+              background: linear-gradient(to top, #01102a 0%, transparent 70%);
+           }
+
+           @media (min-width: 992px) { 
               background: none;
            }
           
@@ -22,11 +26,12 @@ const AboutUs = () => (
           @media (min-width: 1200px) {
               grid-template-columns: 1fr 1fr;
               grid-auto-rows: 100vh;
+              grid-template-rows: auto;
               }
           height: 110%;
           position: relative;
           &:after {
-              background: top 10vh left -60vw / 120% no-repeat url('/images/webanah-character1.png');
+              background: top 0vh left -60vw / 120% no-repeat url('/images/webanah-character1.png');
               @media (min-width: 1200px) {
                   background: -210% 0% / 80% no-repeat url('/images/webanah-character1.png');
               }
@@ -34,7 +39,7 @@ const AboutUs = () => (
               opacity: 0.2;
               top: 0;
               left: 0;
-              bottom: 0;
+              bottom: 100px;
               right: 0;
               position: absolute;
               z-index: -1;
@@ -45,8 +50,10 @@ const AboutUs = () => (
             css={css`
               // X-Small devices (portrait phones, less than 576px)
               align-self: center;
-              padding: 0.5rem;
-              margin-top: -5rem;
+              padding: 1rem;
+              grid-column: 1;
+              grid-row: 3 / 7;
+              /* margin-top: -5rem; */
               // Large devices (desktops, 992px and up)
               @media (min-width: 992px) {  }
               // X-Large devices (large desktops, 1200px and up)
@@ -54,6 +61,7 @@ const AboutUs = () => (
                   margin-right: -1rem;
                   padding: 0;
                   margin-top: 0;
+                  grid-row: 1 / 2;
                }
               `}
         >
@@ -80,9 +88,9 @@ const AboutUs = () => (
             <div
                 css={css`
                   // X-Small devices (portrait phones, less than 576px)
-                  /* padding: 0.5rem; */
-                  margin-bottom: 3rem;
-                  font-size: 0.80rem;
+                  padding-top: 0.75rem;
+                  /* margin-bottom: 3rem; */
+                  /* font-size: 0.80rem; */
                   /* text-align: center; */
 
                   // Small devices (landscape phones, 576px and up)
@@ -93,7 +101,7 @@ const AboutUs = () => (
                           
                   // Large devices (desktops, 992px and up)
                   @media (min-width: 992px) { 
-                      font-size: 0.9rem;
+                      /* font-size: 0.9rem; */
                    }
                           
                   // X-Large devices (large desktops, 1200px and up)
@@ -113,12 +121,17 @@ const AboutUs = () => (
             css={css`
               // X-Small devices (portrait phones, less than 576px)
               /* padding: 0 10%; */
-              margin-top: 7rem;
+              /* margin-top: 12.5rem; */
               margin-right: -2rem;
-              grid-row: 1 / 2;
+              grid-row: 1 / 6;
+              grid-column: 1;
               z-index: -1;
-              align-self: start;
+              align-self: center;
               justify-self: center;
+              position: relative;
+              width: 100%;
+              height: 130%;
+              /* margin-bottom: -15rem; */
 
               @media (max-width: 320px) {
                   margin-top: 5rem;
@@ -126,22 +139,28 @@ const AboutUs = () => (
 
               // Small devices (landscape phones, 576px and up)
               @media (min-width: 576px) { 
-                  padding: 0 20%;
+                  /* padding: 0 20%; */
                }
                           
               // Medium devices (tablets, 768px and up)
-              @media (min-width: 768px) {  }
+              @media (min-width: 768px) { 
+                  width: 60%;
+               }
                       
               // Large devices (desktops, 992px and up)
               @media (min-width: 992px) {  }
                       
               // X-Large devices (large desktops, 1200px and up)
               @media (min-width: 1200px) { 
+                  grid-row: 1 / 2;
                   grid-column: 2 / 3;
-                  padding: 0 10%;
+                  align-self: center;
+                  padding: 0 15%;
                   margin-top: 25rem;
                   margin-right: 0;
-                  align-self: center;
+                  margin-bottom: 0;
+                  width: 50%;
+                  height: 130%;
                }
                       
               // XX-Large devices (larger desktops, 1400px and up)
@@ -149,9 +168,11 @@ const AboutUs = () => (
               `}>
             <Image
                 src="/images/webanah-character1.png"
-                layout="intrinsic"
-                width={638}
-                height={1297}
+                layout="fill"
+                objectFit="cover"
+                objectPosition="50% -25%"
+            // width={638}
+            // height={1297}
             />
         </div>
     </div>

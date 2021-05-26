@@ -9,17 +9,22 @@ const Services = () => (
     css={css`
           display: flex;
           flex-direction: column;
-          font-size: 0.55rem;
+          /* font-size: 0.55rem; */
           text-align: center;
           `}>
     <div
       css={css`
               /* padding: 0 5rem; */
               display: grid;
-              grid-template-columns: repeat(6, 1fr);
+              gap: 1rem;
+              grid-template-columns: repeat(3, 1fr);
               grid-template-rows: repeat(3, 1fr);
               align-items: center;
               justify-items: center;
+
+              @media (max-width: 320px) {
+                  gap: unset;
+              }
 
               /* 
                 ##Device = Desktops
@@ -30,6 +35,7 @@ const Services = () => (
               
                 /* CSS */
                 margin-top: 2rem;
+                /* grid-template-columns: repeat(6, 1fr); */
 
               
               }
@@ -53,7 +59,7 @@ const Services = () => (
               @media (min-width: 768px) and (max-width: 1024px) {
               
                 /* CSS */
-                margin-top: 10rem;
+                /* margin-top: 10rem; */
               
               }
               
@@ -87,13 +93,13 @@ const Services = () => (
               @media (min-width: 320px) and (max-width: 480px) {
               
                 /* CSS */
-                margin-top: 5rem;
+                /* margin-top: 5rem; */
               
               }
 
-              @media (max-width: 320px) {
+              /* @media (max-width: 320px) {
                   grid-template-columns: repeat(6, 53.33px);
-              }
+              } */
               `}>
       <div
         css={css`
@@ -122,7 +128,7 @@ const Services = () => (
       <div
         css={css`
                   grid-row: 2 / 3;
-                  grid-column: 2 / 3;
+                  grid-column: 1 / 2;
 
                   animation: move_b 1s linear infinite;
                   animation-direction: alternate;
@@ -145,13 +151,13 @@ const Services = () => (
       </div>
       <div
         css={css`
-                  grid-row: 1 / 2;
-                  grid-column: 3 / 4;
-                  margin-left: -2rem;
+                  grid-row: 2 / 3;
+                  grid-column: 2 / 3;
+                  /* margin-left: -2rem; */
 
-                  animation: move_seo 1s linear infinite;
+                  animation: move_se 1s linear infinite;
                   animation-direction: alternate;
-                  @keyframes move_seo {
+                  @keyframes move_se {
                       0% {
                           transform: translate(0px, 0%);
                       }
@@ -171,7 +177,7 @@ const Services = () => (
       <div
         css={css`
                   grid-row: 1 / 2;
-                  grid-column: 4 / 5;
+                  grid-column: 2 / 3;
 
                   animation: move_cp 1s linear infinite;
                   animation-direction: alternate;
@@ -195,8 +201,8 @@ const Services = () => (
       <div
         css={css`
                   grid-row: 2 / 3;
-                  grid-column: 5 / 6;
-                  margin-right: -2rem;
+                  grid-column: 3 / 4;
+                  /* margin-right: -2rem; */
 
                   animation: move_c 1s linear infinite;
                   animation-direction: alternate;
@@ -220,7 +226,7 @@ const Services = () => (
       <div
         css={css`
                   grid-row: 3 / 4;
-                  grid-column: 6 / 7;
+                  grid-column: 3 / 4;
 
                   animation: move_app 1s linear infinite;
                   animation-direction: alternate;
@@ -252,8 +258,8 @@ const Services = () => (
               @media (min-width: 1281px) {
               
                 /* CSS */
-                margin-top: -15rem;
-                padding: 0 2rem;
+                margin-top: -7rem;
+                padding: 0 15rem;
               
               }
               
@@ -278,7 +284,7 @@ const Services = () => (
               @media (min-width: 768px) and (max-width: 1024px) {
               
                 /* CSS */
-                margin-top: -10rem;
+                margin-top: -6rem;
               
               }
               
@@ -312,15 +318,15 @@ const Services = () => (
               @media (min-width: 320px) and (max-width: 480px) {
               
                 /* CSS */
-                margin-top: -7rem;
+                margin-top: -5rem;
               
               }
               `}>
       <Image
         src="/images/13.png"
         layout="intrinsic"
-        width="1440"
-        height="1994"
+        width="1367"
+        height="1716"
       />
     </div>
   </div>
