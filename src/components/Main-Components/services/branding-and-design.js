@@ -2,7 +2,8 @@
 
 import { css, jsx } from "@emotion/react"
 import Image from "next/image"
-import ReadMoreReact from 'read-more-react';
+import ShowMoreText from 'react-show-more-text';
+
 
 const BrandingAndDesign = () => (
     <div
@@ -80,8 +81,12 @@ const BrandingAndDesign = () => (
                   @media (min-width: 1400px) {  }
                   `}
             >
-                <p>Having a unique identity that is positioned into audience’s mind be it an enticing logo, attractive color palette or catchy taglines and headlines, merchandise, ATL and BTL activities all fall under branding and design department. Webanah is a leading branding and design company with an exceptional design team that creates original, intriguing, and innovative designs that capture the essence of your brand. The team’s designs help our customers in maximizing their revenues and engagement. In the modern world, your designs are your first interaction with your potential clients, making your designs the most important part of your company’s overview.</p>
-                <p>Reach out to us for the absolute best to work on your company’s needs. Our clients can count on total transparency from us, as our team appreciates our clients’ input in making the final product better than the initial drafts. Hundreds of clients choose to trust us with their everyday designing needs. Waste no time and reach out to get the best team of designers working for you in no time.</p>
+                <ShowMoreText
+                    lines={4}
+                    anchorClass="show-more-button">
+                    <p>Having a unique identity that is positioned into audience’s mind be it an enticing logo, attractive color palette or catchy taglines and headlines, merchandise, ATL and BTL activities all fall under branding and design department. Webanah is a leading branding and design company with an exceptional design team that creates original, intriguing, and innovative designs that capture the essence of your brand. The team’s designs help our customers in maximizing their revenues and engagement. In the modern world, your designs are your first interaction with your potential clients, making your designs the most important part of your company’s overview.</p>
+                    <p>Reach out to us for the absolute best to work on your company’s needs. Our clients can count on total transparency from us, as our team appreciates our clients’ input in making the final product better than the initial drafts. Hundreds of clients choose to trust us with their everyday designing needs. Waste no time and reach out to get the best team of designers working for you in no time.</p>
+                </ShowMoreText>
             </div>
         </div>
         <div
@@ -139,7 +144,7 @@ const BrandingAndDesign = () => (
                 height={547}
             />
         </div>
-    </div >
+    </div>
 )
 
 export default BrandingAndDesign

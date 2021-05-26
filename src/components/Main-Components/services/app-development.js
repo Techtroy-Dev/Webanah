@@ -3,6 +3,7 @@
 import { css, jsx } from "@emotion/react"
 import Image from "next/image"
 import { Button } from "../../Sub-Components/button"
+import ShowMoreText from 'react-show-more-text';
 
 
 const AppDevelopment = () => (
@@ -83,8 +84,12 @@ const AppDevelopment = () => (
                   @media (min-width: 1400px) {  }
                   `}
             >
-                <p>Webanah has a proficient team of app developers who have experience with top product managers, software developers, designers, and project managers. Our experts are skilled to work with Android apps, iOS apps, iPad OS apps, and cross-platform apps. We have diverse and enough team members, expert in different fields.  Each client is assigned to a developer based on their area of expertise and their years of experience in the relevant field of client’s business. Throughout the app development phase, our experts will keep you looped in with the progress and make changes in the final draft according to your preferences.</p>
-                <p>Companies work with Webanah to augment their app and web development needs because of our reputable team and trusted end product. Reach out to us if you are looking to design an app for your business or want to redesign your existing app into an updated one with effective framework and strategy. Webanah is always excited to have the back of its clients.</p>
+                <ShowMoreText
+                    lines={4}
+                    anchorClass="show-more-button">
+                    <p>Webanah has a proficient team of app developers who have experience with top product managers, software developers, designers, and project managers. Our experts are skilled to work with Android apps, iOS apps, iPad OS apps, and cross-platform apps. We have diverse and enough team members, expert in different fields.  Each client is assigned to a developer based on their area of expertise and their years of experience in the relevant field of client’s business. Throughout the app development phase, our experts will keep you looped in with the progress and make changes in the final draft according to your preferences.</p>
+                    <p>Companies work with Webanah to augment their app and web development needs because of our reputable team and trusted end product. Reach out to us if you are looking to design an app for your business or want to redesign your existing app into an updated one with effective framework and strategy. Webanah is always excited to have the back of its clients.</p>
+                </ShowMoreText>
             </div>
         </div>
 

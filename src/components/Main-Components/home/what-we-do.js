@@ -4,6 +4,7 @@ import { css, jsx } from "@emotion/react";
 import Image from "next/image"
 import styled from "@emotion/styled"
 import Link from "next/link"
+import ShowMoreText from 'react-show-more-text';
 import { Button } from "../../Sub-Components/button"
 
 const WhatWeDo = () => (
@@ -99,7 +100,11 @@ const WhatWeDo = () => (
                   @media (min-width: 1400px) {  }
                   `}
             >
-                Webanah is a digital superhero at your rescue for all the digital needs of your brand. With a professional and highly experienced team on board, Webanah provides you with ultimate marketing strategies for your website. Webanah takes your brand to the new heights of success by increasing the audience towards the website through specific promotional strategies like successful SEO, attractive branding, impeccable UI/UX designing, engaging content creation, responsive app development, and ideas-driven consultancy. Our team works untiringly until your website reaches desired results.
+                <ShowMoreText
+                    lines={4}
+                    anchorClass="show-more-button">
+                    Webanah is a digital superhero at your rescue for all the digital needs of your brand. With a professional and highly experienced team on board, Webanah provides you with ultimate marketing strategies for your website. Webanah takes your brand to the new heights of success by increasing the audience towards the website through specific promotional strategies like successful SEO, attractive branding, impeccable UI/UX designing, engaging content creation, responsive app development, and ideas-driven consultancy. Our team works untiringly until your website reaches desired results.
+    </ShowMoreText>
             </div>
             <div
                 css={css`

@@ -2,16 +2,16 @@
 
 import { css, jsx } from "@emotion/react";
 import Image from "next/image"
-import styled from "@emotion/styled"
 import Link from "next/link";
 import { Button } from "../../Sub-Components/button"
+import ShowMoreText from 'react-show-more-text';
 
 const Home = () => (
     <div
         css={css`
           // X-Small devices (portrait phones, less than 576px)
           display: grid;
-          /* grid-auto-rows: 50vh; */
+          grid-auto-rows: 50vh;
 
           // X-Large devices (large desktops, 1200px and up)
           @media (min-width: 1200px) {
@@ -39,12 +39,13 @@ const Home = () => (
         <div
             css={css`
               // X-Small devices (portrait phones, less than 576px)
-              align-self: center;
+              align-self: start;
               /* margin-top: -7.5rem; */
 
               // X-Large devices (large desktops, 1200px and up)
               @media (min-width: 1200px) { 
                   margin-top: -5rem;
+                  align-self: center;
                }
               `}
         >
@@ -116,7 +117,11 @@ const Home = () => (
                   @media (min-width: 1400px) {  }
                   `}
             >
-                Webanah is your ultimate fantasy that has come alive. Your dream of having an established and attractive website design for your business with commendable online performance and abundant revenue is Webanah’s food for soul. Webanah use your dream to energize its webanarians who make your brand rule the online universe with engaging design, unparallel digital marketing strategies and position it to the throne of search engines' highest rank.
+                <ShowMoreText
+                    lines={4}
+                    anchorClass="show-more-button">
+                    Webanah is your ultimate fantasy that has come alive. Your dream of having an established and attractive website design for your business with commendable online performance and abundant revenue is Webanah’s food for soul. Webanah use your dream to energize its webanarians who make your brand rule the online universe with engaging design, unparallel digital marketing strategies and position it to the throne of search engines' highest rank.
+                    </ShowMoreText>
             </div>
             <div
                 css={css`
@@ -140,7 +145,7 @@ const Home = () => (
               margin-right: -5rem;
               grid-row: 1 / 2;
               z-index: -1;
-              align-self: center;
+              align-self: end;
               justify-self: center;
 
               // Small devices (landscape phones, 576px and up)
@@ -156,6 +161,7 @@ const Home = () => (
               @media (min-width: 1200px) { 
                   margin-bottom: 0;
                   grid-column: 2 / 3;
+                  align-self: start;
                }
                       
               // XX-Large devices (larger desktops, 1400px and up)

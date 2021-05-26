@@ -40,6 +40,9 @@ export const globalStyles = (
       a:hover {
         text-decoration: underline;
       }
+      .show-more-button {
+        color: #16f533;
+      }
     `}
   />
 )

@@ -2,7 +2,7 @@
 
 import { css, jsx } from "@emotion/react"
 import Image from "next/image"
-import { Button } from "../../Sub-Components/button"
+import ShowMoreText from 'react-show-more-text';
 
 
 const OurMission = () => (
@@ -81,8 +81,12 @@ const OurMission = () => (
                   @media (min-width: 1400px) {  }
                   `}
             >
-                <p>Webanah is your ultimate business savior. The sole mission of Webanah is to help small and large businesses to grow online with better marketing and ROI. Our professional team tracks every marketing activity that your business follows and eliminates needless strategies. We design effective promotional strategies that increase the traffic towards your business website through detailed research. We crawl deep into the statistics of your target market, niche, and opportunities to create effective strategies that would help your business to grow its online presence.</p>
-                <p>And to gain that boost in your business we have a team of professional team of developers on board to design your website, apps and provide social media marketing. Our mission is to turn your business in to a brand and position it into customer’s mind through effective promotional strategies.</p>
+                <ShowMoreText
+                    lines={4}
+                    anchorClass="show-more-button">
+                    <p>Webanah is your ultimate business savior. The sole mission of Webanah is to help small and large businesses to grow online with better marketing and ROI. Our professional team tracks every marketing activity that your business follows and eliminates needless strategies. We design effective promotional strategies that increase the traffic towards your business website through detailed research. We crawl deep into the statistics of your target market, niche, and opportunities to create effective strategies that would help your business to grow its online presence.</p>
+                    <p>And to gain that boost in your business we have a team of professional team of developers on board to design your website, apps and provide social media marketing. Our mission is to turn your business in to a brand and position it into customer’s mind through effective promotional strategies.</p>
+                </ShowMoreText>
             </div>
         </div>
         <div

@@ -35,6 +35,7 @@ const Services = () => (
               
                 /* CSS */
                 margin-top: 2rem;
+                /* grid-template-columns: repeat(6, 1fr); */
 
               
               }
@@ -154,9 +155,9 @@ const Services = () => (
                   grid-column: 2 / 3;
                   /* margin-left: -2rem; */
 
-                  animation: move_seo 1s linear infinite;
+                  animation: move_se 1s linear infinite;
                   animation-direction: alternate;
-                  @keyframes move_seo {
+                  @keyframes move_se {
                       0% {
                           transform: translate(0px, 0%);
                       }

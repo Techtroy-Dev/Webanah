@@ -62,6 +62,7 @@ function Header() {
 							css={css`
 							  font-weight: bold;
 							  `}
+						// primary
 						>
 							<div>CONTACT US</div>
 						</Button>

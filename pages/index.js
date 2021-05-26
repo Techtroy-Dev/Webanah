@@ -5,20 +5,19 @@ import styled from "@emotion/styled"
 import { Scrolls } from "../src/components/Sub-Components/scrollbars"
 import Home from "../src/components/Main-Components/home/home"
 import WhatWeDo from "../src/components/Main-Components/home/what-we-do"
+import Services from "../src/components/Main-Components/home/services"
 import BestSolution from "../src/components/Main-Components/home/best-solution"
 import WhyWeStandOut from "../src/components/Main-Components/home/why-we-stand-out"
-import React, { useState } from "react";
 import Head from "next/head"
+import React, { useState, useEffect, useRef, useCallback } from "react"
 import gsap from "gsap"
-import { useRef, useEffect, useCallback } from "react"
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 import Layout from "../src/components/Main-Components/Layout"
-import Services from "../src/components/Main-Components/home/services"
-// import Layout from "../src/components/Main-Components/Layout";
-// import Link from "next/link"
 
 const Space = styled.div`
-  padding: 5% 0;
+  @media (max-width: 991.98px) {
+      padding: 10% 0;
+   }
 `
 
 const Container = styled.div`
@@ -181,6 +180,7 @@ function Main() {
 							<WhyWeStandOut />
 						</Panel>
 					</Container>
+					<Space />
 				</div>
 			</Layout>
 		</>

@@ -7,7 +7,7 @@ const base = css`
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: 1fr;
-  padding: 0.25rem 1rem;
+  padding: 0.25rem 1.5rem;
   @media (min-width: 1200px) {
       grid-template-columns: 1fr 1fr 1fr;
       padding: 1rem 0.25rem;

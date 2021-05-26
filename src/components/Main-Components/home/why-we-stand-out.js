@@ -9,7 +9,7 @@ const base = css`
   grid-template-columns: 1fr;
   grid-auto-rows: 1fr;
   grid-gap: 1rem;
-  padding: 1rem;
+  padding: 1.5rem;
   padding-top: 0.75rem;
   
   @media (min-width: 768px) {

@@ -12,7 +12,7 @@ const BuildTheBestExperience = () => (
           display: grid;
           grid-template-rows: repeat(6, 1fr);
           /* grid-auto-rows: 50vh; */
-          background: linear-gradient(to top, #01102a 10%, transparent 90%);
+          background: linear-gradient(to top, transparent 0%, #01102a 30%, transparent 90%);
 
           // Medium devices (tablets, 768px and up)
           @media (min-width: 768px) { 

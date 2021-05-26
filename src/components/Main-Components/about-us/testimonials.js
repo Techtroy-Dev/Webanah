@@ -62,6 +62,7 @@ const base = css`
   @media (min-width: 481px) and (max-width: 767px) {
     
     /* CSS */
+    padding: 0 1.5rem;
     
   }
   
@@ -73,7 +74,7 @@ const base = css`
   @media (min-width: 320px) and (max-width: 480px) {
     
     /* CSS */
-    padding: 0 1rem;
+    padding: 0 1.5rem;
     
   }
   & > div {
