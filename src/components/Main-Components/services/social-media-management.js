@@ -13,11 +13,17 @@ const SocialMediaManagement = () => (
           display: grid;
           /* grid-auto-rows: 50vh; */
           row-gap: 1rem;
+
+          // Large devices (desktops, 992px and up)
+          @media (min-width: 992px) { 
+              grid-template-columns: 1fr 1fr;
+              grid-auto-rows: 100vh;
+           }
           
           // X-Large devices (large desktops, 1200px and up)
           @media (min-width: 1200px) {
-              grid-template-columns: 1fr 1fr;
-              grid-auto-rows: 100vh;
+              /* grid-template-columns: 1fr 1fr;
+              grid-auto-rows: 100vh; */
               }
           `}
     >
@@ -26,6 +32,12 @@ const SocialMediaManagement = () => (
               // X-Small devices (portrait phones, less than 576px)
               align-self: center;
               /* margin-top: -5rem; */
+
+              // Large devices (desktops, 992px and up)
+              @media (min-width: 992px) { 
+                  /* margin-top: -5rem; */
+                  margin-right: -4rem;
+               }
 
               // X-Large devices (large desktops, 1200px and up)
               @media (min-width: 1200px) { 
@@ -44,9 +56,14 @@ const SocialMediaManagement = () => (
                   letter-spacing: 0.1rem;
                   text-align: center;
 
+                  // Large devices (desktops, 992px and up)
+                  @media (min-width: 992px) { 
+                      text-align: left;
+                   }
+
                   // X-Large devices (large desktops, 1200px and up)
                   @media (min-width: 1200px) { 
-                      text-align: left;
+                      /* text-align: left; */
                       /* margin-right: -5rem; */
                    }
                   `}
@@ -69,14 +86,17 @@ const SocialMediaManagement = () => (
                           
                   // Large devices (desktops, 992px and up)
                   @media (min-width: 992px) { 
-                      /* font-size: 0.8rem; */
+                      font-size: 0.8rem;
+                      text-align: left;
+                      padding: 0;
                    }
                           
                   // X-Large devices (large desktops, 1200px and up)
                   @media (min-width: 1200px) { 
-                      font-size: 0.90rem;
+                      /* font-size: 0.90rem;
                       text-align: left;
-                      padding: 0;
+                      padding: 0; */
+                      font-size: 1rem;
                    }
                           
                   // XX-Large devices (larger desktops, 1400px and up)
@@ -116,14 +136,19 @@ const SocialMediaManagement = () => (
                }
                       
               // Large devices (desktops, 992px and up)
-              @media (min-width: 992px) {  }
+              @media (min-width: 992px) { 
+                  grid-column: 2 / 3;
+                  align-self: center;
+                  padding: 0 20%;
+                  margin-bottom: 0;
+               }
                       
               // X-Large devices (large desktops, 1200px and up)
               @media (min-width: 1200px) { 
-                  grid-column: 2 / 3;
-                  align-self: center;
+                  /* grid-column: 2 / 3; */
+                  /* align-self: center; */
                   padding: 0 10%;
-                  margin-bottom: 0;
+                  /* margin-bottom: 0; */
                }
                       
               // XX-Large devices (larger desktops, 1400px and up)

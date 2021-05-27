@@ -21,12 +21,14 @@ const BusinessGrowthAgency = () => (
 
            @media (min-width: 992px) { 
               background: none;
+              grid-template-columns: 1fr 1fr;
+              grid-auto-rows: 100vh;
            }
 
           // X-Large devices (large desktops, 1200px and up)
           @media (min-width: 1200px) {
-              grid-template-columns: 1fr 1fr;
-              grid-auto-rows: 100vh;
+              /* grid-template-columns: 1fr 1fr;
+              grid-auto-rows: 100vh; */
           }
           height: 110%;
           position: relative;
@@ -51,10 +53,16 @@ const BusinessGrowthAgency = () => (
               align-self: center;
               /* margin-top: -17.5rem; */
 
+              // Large devices (desktops, 992px and up)
+              @media (min-width: 992px) { 
+                  margin-right: -3rem;
+                  /* margin-top: -5rem; */
+               }
+
               // X-Large devices (large desktops, 1200px and up)
               @media (min-width: 1200px) {
-                  margin-right: -3rem;
-                  margin-top: -5rem;
+                  /* margin-right: -3rem;
+                  margin-top: -5rem; */
               }
               `}
         >
@@ -71,9 +79,14 @@ const BusinessGrowthAgency = () => (
                       margin-top: -4rem;
                    }
 
+                  // Large devices (desktops, 992px and up)
+                  @media (min-width: 992px) { 
+                      text-align: left;
+                   }
+
                   // X-Large devices (large desktops, 1200px and up)
                   @media (min-width: 1200px) { 
-                      text-align: left;
+                      /* text-align: left; */
                    }
                   `}
             >
@@ -96,12 +109,15 @@ const BusinessGrowthAgency = () => (
                   @media (min-width: 768px) {  }
                           
                   // Large devices (desktops, 992px and up)
-                  @media (min-width: 992px) {  }
+                  @media (min-width: 992px) { 
+                      text-align: left;
+                      padding: 1rem 0;
+                   }
                           
                   // X-Large devices (large desktops, 1200px and up)
                   @media (min-width: 1200px) { 
-                      text-align: left;
-                      padding: 1rem 0;
+                      /* text-align: left;
+                      padding: 1rem 0; */
                    }
                           
                   // XX-Large devices (larger desktops, 1400px and up)
@@ -115,9 +131,14 @@ const BusinessGrowthAgency = () => (
                   // X-Small devices (portrait phones, less than 576px)
                   text-align: center;
 
+                  // Large devices (desktops, 992px and up)
+                  @media (min-width: 992px) { 
+                      text-align: left;
+                   }
+
                   // X-Large devices (large desktops, 1200px and up)
                   @media (min-width: 1200px) { 
-                      text-align: left;
+                      /* text-align: left; */
                    }
                   `}
             >
@@ -144,16 +165,23 @@ const BusinessGrowthAgency = () => (
               @media (min-width: 768px) {  }
                       
               // Large devices (desktops, 992px and up)
-              @media (min-width: 992px) {  }
-                      
-              // X-Large devices (large desktops, 1200px and up)
-              @media (min-width: 1200px) { 
+              @media (min-width: 992px) { 
                   grid-column: 2 / 3;
                   padding: 0 10%;
                   margin-top: 10rem;
                   align-self: center;
                   width: 60%;
                   height: 100%;
+               }
+                      
+              // X-Large devices (large desktops, 1200px and up)
+              @media (min-width: 1200px) { 
+                  /* grid-column: 2 / 3;
+                  padding: 0 10%;
+                  margin-top: 10rem;
+                  align-self: center;
+                  width: 60%;
+                  height: 100%; */
                }
                       
               // XX-Large devices (larger desktops, 1400px and up)

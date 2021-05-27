@@ -17,11 +17,15 @@ const base = css`
   }
 
   @media (min-width: 992px) {
+      font-size: 0.9rem;
+      padding: 0;
       grid-gap: 0.5rem;
+      grid-template-columns: 1fr 1fr 1fr;
   }
   
   @media (min-width: 1200px) {
-      grid-template-columns: 1fr 1fr 1fr;
+    font-size: 1rem;
+      ${'' /* grid-template-columns: 1fr 1fr 1fr; */}
       ${'' /* padding: 1rem; */}
   }
   ${'' /* color: lightgrey; */}
@@ -43,7 +47,7 @@ const base = css`
         border-right: 0.2rem solid #16f533;
       }
       > div {
-          padding: 0.25rem;
+          margin: 0.25rem;
       }
       > div:nth-of-type(-n+2) {
           text-align: center;
@@ -58,7 +62,10 @@ const base = css`
           ${'' /* letter-spacing: 0.1rem; */}
           ${'' /* line-height: 1.4rem; */}
           ${'' /* font-size: 0.90rem; */}
-          padding: 0.5rem 1rem;
+          margin: 0.5rem;
+          @media (min-width: 992px) {
+              margin: 0.25;
+          }
           padding-top: 0;
 
       }

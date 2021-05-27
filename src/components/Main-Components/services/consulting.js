@@ -12,11 +12,17 @@ const Consulting = () => (
           // X-Small devices (portrait phones, less than 576px)
           display: grid;
           /* grid-auto-rows: 50vh; */
+
+          // Large devices (desktops, 992px and up)
+          @media (min-width: 992px) { 
+              grid-template-columns: 1fr 1fr;
+              grid-auto-rows: 100vh;
+           }
           
           // X-Large devices (large desktops, 1200px and up)
           @media (min-width: 1200px) {
-              grid-template-columns: 1fr 1fr;
-              grid-auto-rows: 100vh;
+              /* grid-template-columns: 1fr 1fr;
+              grid-auto-rows: 100vh; */
               }
           `}
     >
@@ -26,10 +32,15 @@ const Consulting = () => (
               align-self: center;
               /* margin-top: -3rem; */
 
+              // Large devices (desktops, 992px and up)
+              @media (min-width: 992px) { 
+                  margin-right: -3rem;
+               }
+
               // X-Large devices (large desktops, 1200px and up)
               @media (min-width: 1200px) { 
                   /* margin-top: 5rem; */
-                  margin-right: -3rem;
+                  /* margin-right: -3rem; */
                }
               `}
         >
@@ -43,9 +54,14 @@ const Consulting = () => (
                   letter-spacing: 0.1rem;
                   text-align: center;
 
+                  // Large devices (desktops, 992px and up)
+                  @media (min-width: 992px) { 
+                      text-align: left;
+                   }
+
                   // X-Large devices (large desktops, 1200px and up)
                   @media (min-width: 1200px) { 
-                      text-align: left;
+                      /* text-align: left; */
                       /* margin-right: -15rem; */
                    }
                   `}
@@ -69,13 +85,16 @@ const Consulting = () => (
                   // Large devices (desktops, 992px and up)
                   @media (min-width: 992px) { 
                       font-size: 0.8rem;
+                      text-align: left;
+                      padding: 0;
                    }
                           
                   // X-Large devices (large desktops, 1200px and up)
                   @media (min-width: 1200px) { 
-                      font-size: 0.9rem;
+                      /* font-size: 0.9rem;
                       text-align: left;
-                      padding: 0;
+                      padding: 0; */
+                      font-size: 1rem;
                    }
                           
                   // XX-Large devices (larger desktops, 1400px and up)
@@ -112,13 +131,17 @@ const Consulting = () => (
               @media (min-width: 768px) {  }
                       
               // Large devices (desktops, 992px and up)
-              @media (min-width: 992px) {  }
-                      
-              // X-Large devices (large desktops, 1200px and up)
-              @media (min-width: 1200px) { 
+              @media (min-width: 992px) { 
                   grid-column: 2 / 3;
                   align-self: center;
                   padding: 0 20%;
+               }
+                      
+              // X-Large devices (large desktops, 1200px and up)
+              @media (min-width: 1200px) { 
+                  /* grid-column: 2 / 3;
+                  align-self: center;
+                  padding: 0 20%; */
                }
                       
               // XX-Large devices (larger desktops, 1400px and up)

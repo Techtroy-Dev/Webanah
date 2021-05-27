@@ -8,9 +8,10 @@ import Image from "next/image"
 /* application of flexbox start */
 const flexContainer = css`
   display: flex;
+  flex-direction: column;
+  gap: 2rem;
   align-items: center;
   overflow-x: auto;
-  gap: 3rem;
   ${'' /* height: 80vh; */}
   ${'' /* margin-top: 2.375rem; */}
   text-align: center;
@@ -18,7 +19,7 @@ const flexContainer = css`
   margin-right: 5%;
   font-family: Green Lantern;
   @media (min-width: 768px) {
-      gap: 2rem;
+      gap: 1.5rem;
       margin-left: 10%;
       margin-right: 10%;
   }
@@ -27,7 +28,7 @@ const flexContainer = css`
       gap: 1rem;
       margin-left: 12%;
       margin-right: 12%;
-      height: 80vh;
+      flex-direction: row;
   }`
 
 const flexItem = css`
@@ -46,40 +47,7 @@ const flexItem = css`
 
 /* application of flexbox end */
 
-const gridContainer = css`
-  /*border: 1px solid black;*/
-  display: grid;
-  grid-template-columns: 1fr;
-  margin-top: 1rem;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 5rem;
-  
-  @media (min-width: 768px) {
-      grid-template-columns: 1fr 1fr 1fr;
-      margin-left: 10%;
-      margin-right: 10%;
-      text-align: center;
-      }
 
-  @media (min-width: 1200px) {
-      grid-template-columns: 1fr 1fr 1fr;
-      margin-left: 12%;
-      margin-right: 12%;
-  }
-  `
-
-const gridItem = css`
-  /*border: 1px solid red;*/
-  text-align: center;
-  /*margin-bottom: 1.875rem;*/
-  @media (min-width: 768px) {
-      margin-right: 1.125rem;
-  }
-  @media (min-width: 1200px) {
-      margin-right: 1.125rem;
-  }
-  `
 
 const text = css`  
   color: white;
@@ -138,8 +106,8 @@ function BlogsCard(props) {
               /* height: 93.75rem; */
               margin-top: 5rem;
               /* height: 100vh; */
-              @media (max-width: 768px) {
-                  /* height: 196.875rem; */
+              @media (min-width: 1200px) {
+                  height: 100vh;
                   }`}>
             <div
                 css={css`
@@ -152,7 +120,7 @@ function BlogsCard(props) {
                   color: transparent;
                   -webkit-text-stroke: 0.06rem #16f533;
                   padding: 0.25rem;
-                  margin-bottom: 10vh;
+                  margin-bottom: 5vh;
 
                   @media (max-width: 1280px){
                     margin-top: 15vh;

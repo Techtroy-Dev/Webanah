@@ -11,10 +11,16 @@ const BestSolution = () => (
           display: grid;
           /* grid-auto-rows: 50vh; */
 
-          // X-Large devices (large desktops, 1200px and up)
-          @media (min-width: 1200px) {
+          // Large devices (desktops, 992px and up)
+          @media (min-width: 992px) { 
               grid-template-columns: 1fr 1fr;
               grid-auto-rows: 100vh;
+           }
+
+          // X-Large devices (large desktops, 1200px and up)
+          @media (min-width: 1200px) {
+              /* grid-template-columns: 1fr 1fr;
+              grid-auto-rows: 100vh; */
               }
           /* height: 110%; */
           `}
@@ -41,9 +47,14 @@ const BestSolution = () => (
                   letter-spacing: 0.1rem;
                   text-align: center;
 
+                  // Large devices (desktops, 992px and up)
+                  @media (min-width: 992px) { 
+                      text-align: left;
+                   }
+
                   // X-Large devices (large desktops, 1200px and up)
                   @media (min-width: 1200px) { 
-                      text-align: left;
+                      /* text-align: left; */
                    }
                   `}
             >
@@ -65,13 +76,14 @@ const BestSolution = () => (
                           
                   // Large devices (desktops, 992px and up)
                   @media (min-width: 992px) { 
-                      font-size: 0.9rem;
+                      /* font-size: 0.9rem; */
+                      text-align: left;
+                      padding: 0;
                    }
                           
                   // X-Large devices (large desktops, 1200px and up)
                   @media (min-width: 1200px) { 
-                      text-align: left;
-                      padding: 0;
+                      /* text-align: left; */
                       margin-top: 0.5rem;
                    }
                           
@@ -114,15 +126,21 @@ const BestSolution = () => (
                }
                       
               // Large devices (desktops, 992px and up)
-              @media (min-width: 992px) {  }
+              @media (min-width: 992px) { 
+                grid-column: 1 / 2;
+                padding: 0 10%;
+                margin-top: 0;
+                margin-bottom: 0;
+                align-self: center;
+               }
                       
               // X-Large devices (large desktops, 1200px and up)
               @media (min-width: 1200px) { 
-                  grid-column: 1 / 2;
+                  /* grid-column: 1 / 2;
                   padding: 0 10%;
                   margin-top: 0;
                   margin-bottom: 0;
-                  align-self: center;
+                  align-self: center; */
                }
                       
               // XX-Large devices (larger desktops, 1400px and up)

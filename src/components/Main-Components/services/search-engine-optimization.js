@@ -13,11 +13,17 @@ const SearchEngineOptimization = () => (
           display: grid;
           /* grid-auto-rows: 50vh; */
           row-gap: 1rem;
+
+          // Large devices (desktops, 992px and up)
+          @media (min-width: 992px) { 
+              grid-template-columns: 1fr 1fr;
+              grid-auto-rows: 100vh;
+           }
           
           // X-Large devices (large desktops, 1200px and up)
           @media (min-width: 1200px) {
-              grid-template-columns: 1fr 1fr;
-              grid-auto-rows: 100vh;
+              /* grid-template-columns: 1fr 1fr;
+              grid-auto-rows: 100vh; */
               }
           `}
     >
@@ -27,10 +33,16 @@ const SearchEngineOptimization = () => (
               align-self: center;
               /* margin-top: -5rem; */
 
+              // Large devices (desktops, 992px and up)
+              @media (min-width: 992px) { 
+                  /* margin-top: 5rem; */
+                  margin-right: -3rem;
+               }
+
               // X-Large devices (large desktops, 1200px and up)
               @media (min-width: 1200px) { 
                   /* margin-top: 5rem; */
-                  margin-right: -3rem;
+                  /* margin-right: -3rem; */
                }
               `}
         >
@@ -44,9 +56,14 @@ const SearchEngineOptimization = () => (
                   letter-spacing: 0.1rem;
                   text-align: center;
 
+                  // Large devices (desktops, 992px and up)
+                  @media (min-width: 992px) { 
+                      text-align: left;
+                   }
+
                   // X-Large devices (large desktops, 1200px and up)
                   @media (min-width: 1200px) { 
-                      text-align: left;
+                      /* text-align: left; */
                    }
                   `}
             >
@@ -69,13 +86,17 @@ const SearchEngineOptimization = () => (
                   // Large devices (desktops, 992px and up)
                   @media (min-width: 992px) { 
                       /* font-size: 0.8rem; */
+                      font-size: 0.80rem;
+                      text-align: left;
+                      padding: 0;
                    }
                           
                   // X-Large devices (large desktops, 1200px and up)
                   @media (min-width: 1200px) { 
-                      font-size: 0.90rem;
+                      /* font-size: 0.90rem;
                       text-align: left;
-                      padding: 0;
+                      padding: 0; */
+                      font-size: 1rem;
                    }
                           
                   // XX-Large devices (larger desktops, 1400px and up)
@@ -116,7 +137,10 @@ const SearchEngineOptimization = () => (
                       
               // Large devices (desktops, 992px and up)
               @media (min-width: 992px) { 
-                  margin-top: 7.5rem;
+                  /* margin-top: 7.5rem; */
+                  grid-column: 2 / 3;
+                  align-self: center;
+                  padding: 0 35%;
                }
                       
               // X-Large devices (large desktops, 1200px and up)

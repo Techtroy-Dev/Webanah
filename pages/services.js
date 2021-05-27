@@ -33,20 +33,13 @@ const Container = styled.div`
 	  width: auto;
 	  height: auto;
 	  flex-direction: column;
-      gap: 15vh;
+      gap: 25vh;
    }
 `
 
 const Panel = styled.div`
   // X-Small devices (portrait phones, less than 576px)
-  width: 100vw;
-  height: 100vh;
   padding: 0;
-  // X-Small devices (portrait phones, less than 576px)
-  @media (max-width: 991.98px) { 
-	  width: auto;
-	  height: auto;
-   }
 
   // Small devices (landscape phones, 576px and up)
   @media (min-width: 576px) { 
@@ -61,11 +54,14 @@ const Panel = styled.div`
   // Large devices (desktops, 992px and up)
   @media (min-width: 992px) { 
 	  padding: 0;
+      width: 100vw;
+      height: 100vh;
+      padding: 0 5rem;
    }
   
   // X-Large devices (large desktops, 1200px and up)
   @media (min-width: 1200px) { 
-      padding: 5rem 7.5rem 0;
+	  padding: 0 7.5rem; 
 	  }
   
   // XX-Large devices (larger desktops, 1400px and up)

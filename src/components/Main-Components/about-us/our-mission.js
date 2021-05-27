@@ -11,11 +11,17 @@ const OurMission = () => (
           // X-Small devices (portrait phones, less than 576px)
           display: grid;
           /* grid-auto-rows: 50vh; */
+
+          // Large devices (desktops, 992px and up)
+          @media (min-width: 992px) { 
+              grid-template-columns: 1fr 1fr;
+              grid-auto-rows: 100vh;
+           }
           
           // X-Large devices (large desktops, 1200px and up)
           @media (min-width: 1200px) {
-              grid-template-columns: 1fr 1fr;
-              grid-auto-rows: 100vh;
+              /* grid-template-columns: 1fr 1fr;
+              grid-auto-rows: 100vh; */
               }
           `}
     >
@@ -26,11 +32,18 @@ const OurMission = () => (
               padding: 1rem;
               /* margin-bottom: 5rem; */
 
-              // X-Large devices (large desktops, 1200px and up)
-              @media (min-width: 1200px) { 
+              // Large devices (desktops, 992px and up)
+              @media (min-width: 992px) { 
                   padding: 0;
                   margin-top: 0;
                   margin-bottom: 0;
+               }
+
+              // X-Large devices (large desktops, 1200px and up)
+              @media (min-width: 1200px) { 
+                  /* padding: 0;
+                  margin-top: 0;
+                  margin-bottom: 0; */
                }
               `}
         >
@@ -68,13 +81,14 @@ const OurMission = () => (
                           
                   // Large devices (desktops, 992px and up)
                   @media (min-width: 992px) { 
-                      /* font-size: 0.9rem; */
+                      font-size: 0.9rem;
                    }
                           
                   // X-Large devices (large desktops, 1200px and up)
                   @media (min-width: 1200px) { 
-                      text-align: left;
-                      padding: 1rem 0;
+                      /* text-align: left; */
+                      /* padding: 1rem 0; */
+                      font-size: 1rem;
                    }
                           
                   // XX-Large devices (larger desktops, 1400px and up)
@@ -117,15 +131,19 @@ const OurMission = () => (
                       
               // Large devices (desktops, 992px and up)
               @media (min-width: 992px) { 
-                  margin-bottom: -20rem;
-               }
-                      
-              // X-Large devices (large desktops, 1200px and up)
-              @media (min-width: 1200px) { 
+                  /* margin-bottom: -20rem; */
                   grid-column: 2 / 3;
                   padding: 0;
                   align-self: center;
                   margin-bottom: 0;
+               }
+                      
+              // X-Large devices (large desktops, 1200px and up)
+              @media (min-width: 1200px) { 
+                  /* grid-column: 2 / 3;
+                  padding: 0;
+                  align-self: center;
+                  margin-bottom: 0; */
                }
                       
               // XX-Large devices (larger desktops, 1400px and up)

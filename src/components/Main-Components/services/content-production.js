@@ -14,11 +14,17 @@ const ContentProduction = () => (
           /* grid-auto-rows: 50vh; */
           row-gap: 1rem;
           /* margin-top: 1rem; */
+
+          // Large devices (desktops, 992px and up)
+          @media (min-width: 992px) { 
+              grid-template-columns: 1fr 1fr;
+              grid-auto-rows: 100vh;
+           }
           
           // X-Large devices (large desktops, 1200px and up)
           @media (min-width: 1200px) {
-              grid-template-columns: 1fr 1fr;
-              grid-auto-rows: 100vh;
+              /* grid-template-columns: 1fr 1fr;
+              grid-auto-rows: 100vh; */
               }
           `}
     >
@@ -49,10 +55,16 @@ const ContentProduction = () => (
                   letter-spacing: 0.1rem;
                   text-align: center;
 
-                  // X-Large devices (large desktops, 1200px and up)
-                  @media (min-width: 1200px) { 
+                  // Large devices (desktops, 992px and up)
+                  @media (min-width: 992px) { 
                       text-align: left;
                       margin-right: -5rem;
+                   }
+
+                  // X-Large devices (large desktops, 1200px and up)
+                  @media (min-width: 1200px) { 
+                      /* text-align: left;
+                      margin-right: -5rem; */
                    }
                   `}
             >
@@ -73,13 +85,18 @@ const ContentProduction = () => (
                   @media (min-width: 768px) {  }
                           
                   // Large devices (desktops, 992px and up)
-                  @media (min-width: 992px) {  }
+                  @media (min-width: 992px) { 
+                      font-size: 0.8rem;
+                      text-align: left;
+                      padding: 0;
+                   }
                           
                   // X-Large devices (large desktops, 1200px and up)
                   @media (min-width: 1200px) { 
-                      font-size: 0.90rem;
+                      /* font-size: 0.90rem;
                       text-align: left;
-                      padding: 0;
+                      padding: 0; */
+                      font-size: 1rem;
                    }
                           
                   // XX-Large devices (larger desktops, 1400px and up)
@@ -120,16 +137,18 @@ const ContentProduction = () => (
                       
               // Large devices (desktops, 992px and up)
               @media (min-width: 992px) { 
-                  align-self: end;
-                  padding: 0 35%;
-               }
-                      
-              // X-Large devices (large desktops, 1200px and up)
-              @media (min-width: 1200px) { 
                   grid-column: 2 / 3;
                   padding: 0 20%;
                   align-self: center;
                   margin-bottom: 0;
+               }
+                      
+              // X-Large devices (large desktops, 1200px and up)
+              @media (min-width: 1200px) { 
+                  /* grid-column: 2 / 3;
+                  padding: 0 20%;
+                  align-self: center;
+                  margin-bottom: 0; */
                }
                       
               // XX-Large devices (larger desktops, 1400px and up)

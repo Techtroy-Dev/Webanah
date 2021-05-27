@@ -28,6 +28,7 @@ const base = css`
   @media (min-width: 1025px) and (max-width: 1280px) {
     
     /* CSS */
+    flex-direction: row;
     
   }
   
@@ -35,6 +36,11 @@ const base = css`
     ##Device = Tablets, Ipads (portrait)
     ##Screen = B/w 768px to 1024px
   */
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) { 
+      flex-direction: row;
+     }
   
   @media (min-width: 768px) and (max-width: 1024px) {
     

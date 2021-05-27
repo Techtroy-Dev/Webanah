@@ -13,6 +13,12 @@ const WhatWeDo = () => (
           // X-Small devices (portrait phones, less than 576px)
           display: grid;
           /* grid-auto-rows: 50vh; */
+
+          // Large devices (desktops, 992px and up)
+          @media (min-width: 992px) {
+              grid-template-columns: 1fr 1fr;
+              grid-auto-rows: 100vh;
+           }
           
           // X-Large devices (large desktops, 1200px and up)
           @media (min-width: 1200px) {
@@ -43,6 +49,11 @@ const WhatWeDo = () => (
               align-self: start;
               /* margin-top: -5rem; */
 
+              // Large devices (desktops, 992px and up)
+              @media (min-width: 992px) { 
+                  align-self: center;
+               }
+
               // X-Large devices (large desktops, 1200px and up)
               @media (min-width: 1200px) { 
                   /* margin-top: 0; */
@@ -61,9 +72,14 @@ const WhatWeDo = () => (
                   letter-spacing: 0.1rem;
                   text-align: center;
 
+                  // Large devices (desktops, 992px and up)
+                  @media (min-width: 992px) { 
+                      text-align: left;
+                   }
+
                   // X-Large devices (large desktops, 1200px and up)
                   @media (min-width: 1200px) { 
-                      text-align: left;
+                      /* text-align: left; */
                    }
                   `}
             >
@@ -86,12 +102,13 @@ const WhatWeDo = () => (
                   // Large devices (desktops, 992px and up)
                   @media (min-width: 992px) { 
                       /* font-size: 0.9rem; */
+                      text-align: left;
+                      padding: 0;
+                      margin-bottom: 1rem;
                    }
                           
                   // X-Large devices (large desktops, 1200px and up)
                   @media (min-width: 1200px) { 
-                      text-align: left;
-                      padding: 0;
                       margin-top: 0.5rem;
                       margin-bottom: 2rem;
                    }
@@ -110,10 +127,15 @@ const WhatWeDo = () => (
                 css={css`
                   // X-Small devices (portrait phones, less than 576px)
                   text-align: center;
+                  
+                  // Large devices (desktops, 992px and up)
+                  @media (min-width: 992px) { 
+                      text-align: left;
+                   }
 
                   // X-Large devices (large desktops, 1200px and up)
                   @media (min-width: 1200px) { 
-                      text-align: left;
+                      /* text-align: left; */
                    }
                   `}
             >
@@ -139,14 +161,19 @@ const WhatWeDo = () => (
               @media (min-width: 768px) {  }
                       
               // Large devices (desktops, 992px and up)
-              @media (min-width: 992px) {  }
-                      
-              // X-Large devices (large desktops, 1200px and up)
-              @media (min-width: 1200px) { 
+              @media (min-width: 992px) { 
                   grid-column: 2 / 3;
                   margin-bottom: 2rem;
                   align-self: center;
                   padding: 0 10%;
+               }
+                      
+              // X-Large devices (large desktops, 1200px and up)
+              @media (min-width: 1200px) { 
+                  /* grid-column: 2 / 3;
+                  margin-bottom: 2rem;
+                  align-self: center;
+                  padding: 0 10%; */
                }
                       
               // XX-Large devices (larger desktops, 1400px and up)

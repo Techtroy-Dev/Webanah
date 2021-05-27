@@ -97,7 +97,7 @@ export const StyledMenu = styled.nav`
   background: #000d23;
   height: 100vh;
   @media (max-width: 768px) {
-    height: 90vh;
+    /* height: 90vh; */
   }
   text-align: left;
   padding: 0 1rem;

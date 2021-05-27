@@ -54,6 +54,7 @@ const Panel = styled.div`
 	  padding: 0;
       width: 100vw;
       height: 100vh;
+      padding: 0 5rem;
    }
   
   // X-Large devices (large desktops, 1200px and up)

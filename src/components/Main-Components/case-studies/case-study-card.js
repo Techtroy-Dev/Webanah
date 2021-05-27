@@ -6,9 +6,10 @@ import Image from "next/image"
 const flexContainer = css`
 
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
   align-items: center;
   overflow-x: auto;
-  gap: 3rem;
   ${'' /* height: 80vh; */}
   ${'' /* margin-top: 2.375rem; */}
   text-align: center;
@@ -16,16 +17,16 @@ const flexContainer = css`
   margin-right: 5%;
   font-family: Green Lantern;
   @media (min-width: 768px) {
-      gap: 2rem;
+      gap: 1.5rem;
       margin-left: 10%;
       margin-right: 10%;
   }
   @media (min-width: 1200px) {
       align-items: start;
       gap: 1rem;
+      flex-direction: row;
       margin-left: 12%;
       margin-right: 12%;
-      height: 80vh;
   }`
 
 const flexItem = css`
@@ -84,6 +85,7 @@ function CaseStudyCard(props) {
               margin-top: 7.5rem;
               @media (min-width: 1200px) {
                 margin-top: 3rem;
+                height: 100vh;
               }
         `}>
             <div css={css`
@@ -96,11 +98,11 @@ function CaseStudyCard(props) {
                   color: transparent;
                   -webkit-text-stroke: 0.06rem #16f533;
                   padding: 0.25rem;
-                  margin-bottom: 10vh;
+                  margin-bottom: 5vh;
 
                   @media (max-width: 1280px){
-                    margin-top: 15vh;
-                    margin-bottom: 8vh;
+                    /* margin-top: 15vh;
+                    margin-bottom: 8vh; */
                   }
               `}>
                 OUR CASE STUDIES

@@ -4,16 +4,17 @@ import React, { useState } from 'react';
 import styled from '@emotion/styled'
 import Link from "next/link"
 import Image from "next/image"
-import StyledModal from '../../Sub-Components/styled-modal'
 import { SearchPlus } from '@emotion-icons/fa-solid'
+import StyledModal from '../../Sub-Components/styled-modal'
 
 /* application of flexbox start */
 
 const flexContainer = css`
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
   align-items: center;
   overflow-x: auto;
-  gap: 0rem;
   ${'' /* height: 80vh; */}
   ${'' /* margin-top: 2.375rem; */}
   text-align: center;
@@ -25,17 +26,24 @@ const flexContainer = css`
       ${'' /* margin-left: 10%;
       margin-right: 10%; */}
   }
-  @media (min-width: 1200px) {
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) { 
       align-items: start;
       gap: 0.5rem;
-      ${'' /* margin-left: 12%;
-      margin-right: 12%;
-      height: 80vh; */}
+      flex-direction: row;
+   }
+
+  @media (min-width: 1200px) {
+      ${'' /* align-items: start;
+      gap: 0.5rem;
+      flex-direction: row; */}
   }`
 
 const flexItem = css`
   text-align: center;
   position: relative;
+  cursor: pointer;
   ${'' /* margin-bottom: 1.875rem; */}
   flex: 1 0 80%;
   @media (min-width: 768px) {

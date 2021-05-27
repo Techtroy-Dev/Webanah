@@ -12,7 +12,7 @@ const BuildTheBestExperience = () => (
           display: grid;
           grid-template-rows: repeat(6, 1fr);
           /* grid-auto-rows: 50vh; */
-          background: linear-gradient(to top, transparent 0%, #01102a 30%, transparent 90%);
+          background: linear-gradient(to top, transparent -50%, #01102a 25%, transparent 150%);
 
           // Medium devices (tablets, 768px and up)
           @media (min-width: 768px) { 
@@ -22,13 +22,16 @@ const BuildTheBestExperience = () => (
 
            @media (min-width: 992px) { 
               background: none;
+              grid-template-columns: 1fr 1fr;
+              grid-auto-rows: 100vh;
+              grid-template-rows: 100vh;
            }
           
           // X-Large devices (large desktops, 1200px and up)
           @media (min-width: 1200px) {
-              grid-template-columns: 1fr 1fr;
+              /* grid-template-columns: 1fr 1fr;
               grid-auto-rows: 100vh;
-              grid-template-rows: auto;
+              grid-template-rows: auto; */
               }
           `}
     >
@@ -42,13 +45,24 @@ const BuildTheBestExperience = () => (
               /* margin-bottom: 7.5rem; */
               /* margin-top: -40rem; */
 
-              // X-Large devices (large desktops, 1200px and up)
-              @media (min-width: 1200px) { 
+              // Large devices (desktops, 992px and up)
+              @media (min-width: 992px) { 
                   margin-left: -6rem;
                   padding: 0;
                   margin-top: 0;
                   grid-row: 1 / 2;
                   grid-column: 2 / 3;
+                  font-size: 0.9rem;
+               }
+
+              // X-Large devices (large desktops, 1200px and up)
+              @media (min-width: 1200px) { 
+                  /* margin-left: -6rem;
+                  padding: 0;
+                  margin-top: 0;
+                  grid-row: 1 / 2;
+                  grid-column: 2 / 3; */
+                  font-size: 1rem;
                }
               `}
         >
@@ -90,8 +104,8 @@ const BuildTheBestExperience = () => (
                           
                   // X-Large devices (large desktops, 1200px and up)
                   @media (min-width: 1200px) { 
-                      text-align: left;
-                      padding: 1rem 0;
+                      /* text-align: left; */
+                      /* padding: 1rem 0; */
                    }
                           
                   // XX-Large devices (larger desktops, 1400px and up)
@@ -123,17 +137,25 @@ const BuildTheBestExperience = () => (
               @media (min-width: 768px) {  }
                       
               // Large devices (desktops, 992px and up)
-              @media (min-width: 992px) {  }
+              @media (min-width: 992px) { 
+                  grid-column: 1 / 2;
+                  grid-row: 1 / 2;
+                  padding: 0 30%;
+                  margin-top: 0;
+                  margin-right: 0;
+                  align-self: center;
+               }
                       
               // X-Large devices (large desktops, 1200px and up)
               @media (min-width: 1200px) { 
-                  grid-column: 1 / 2;
+                  /* grid-column: 1 / 2;
                   grid-row: 1 / 2;
                   padding: 0 20%;
                   margin-top: 0;
                   margin-right: 0;
-                  align-self: center;
+                  align-self: center; */
                   /* opacity: 1; */
+                  padding: 0 20%;
                }
                       
               // XX-Large devices (larger desktops, 1400px and up)

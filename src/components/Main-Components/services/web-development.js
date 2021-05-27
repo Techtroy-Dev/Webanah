@@ -18,11 +18,18 @@ const WebDevelopment = () => (
               margin-top: 5rem;
            } */
 
-          // X-Large devices (large desktops, 1200px and up)
-          @media (min-width: 1200px) {
+           // Large devices (desktops, 992px and up)
+          @media (min-width: 992px) { 
               grid-template-columns: 1fr 1fr;
               grid-auto-rows: 100vh;
               margin-top: 0;
+           }
+
+          // X-Large devices (large desktops, 1200px and up)
+          @media (min-width: 1200px) {
+              /* grid-template-columns: 1fr 1fr;
+              grid-auto-rows: 100vh;
+              margin-top: 0; */
               }
           `}
     >
@@ -32,11 +39,18 @@ const WebDevelopment = () => (
               align-self: center;
               /* margin-top: -5rem; */
 
-              // X-Large devices (large desktops, 1200px and up)
-              @media (min-width: 1200px) { 
+              // Large devices (desktops, 992px and up)
+              @media (min-width: 992px) { 
                   /* margin-top: 5rem; */
                   margin-right: -3rem;
                   align-self: center;
+               }
+
+              // X-Large devices (large desktops, 1200px and up)
+              @media (min-width: 1200px) { 
+                  margin-top: 5rem;
+                  /* margin-right: -3rem;
+                  align-self: center; */
                }
               `}
         >
@@ -50,10 +64,16 @@ const WebDevelopment = () => (
                   letter-spacing: 0.1rem;
                   text-align: center;
 
+                  // Large devices (desktops, 992px and up)
+                  @media (min-width: 992px) { 
+                    text-align: left;
+                    margin-right: -15rem;
+                   }
+
                   // X-Large devices (large desktops, 1200px and up)
                   @media (min-width: 1200px) { 
-                      text-align: left;
-                      margin-right: -15rem;
+                      /* text-align: left;
+                      margin-right: -15rem; */
                    }
                   `}
             >
@@ -74,14 +94,20 @@ const WebDevelopment = () => (
                   @media (min-width: 768px) {  }
                           
                   // Large devices (desktops, 992px and up)
-                  @media (min-width: 992px) {  }
-                          
-                  // X-Large devices (large desktops, 1200px and up)
-                  @media (min-width: 1200px) { 
+                  @media (min-width: 992px) { 
                       font-size: 0.90rem;
                       text-align: left;
                       padding: 0;
                       margin-top: 0.5rem;
+                   }
+                          
+                  // X-Large devices (large desktops, 1200px and up)
+                  @media (min-width: 1200px) { 
+                      /* font-size: 0.90rem;
+                      text-align: left;
+                      padding: 0;
+                      margin-top: 0.5rem; */
+                      font-size: 1rem;
                    }
                           
                   // XX-Large devices (larger desktops, 1400px and up)
@@ -122,15 +148,20 @@ const WebDevelopment = () => (
                }
                       
               // Large devices (desktops, 992px and up)
-              @media (min-width: 992px) {  }
+              @media (min-width: 992px) { 
+                  grid-column: 2 / 3;
+                  align-self: center;
+                  padding: 0 15%;
+                  margin-bottom: 2rem;
+               }
                       
               // X-Large devices (large desktops, 1200px and up)
               @media (min-width: 1200px) { 
-                  grid-column: 2 / 3;
+                  /* grid-column: 2 / 3;
                   align-self: center;
-                  /* padding: 0 10%; */
+                  padding: 0 10%;
+                  margin-bottom: 2rem; */
                   padding: 0;
-                  margin-bottom: 2rem;
                }
                       
               // XX-Large devices (larger desktops, 1400px and up)

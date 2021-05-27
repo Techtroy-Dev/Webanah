@@ -10,9 +10,10 @@ import { SearchPlus } from '@emotion-icons/fa-solid'
 
 const flexContainer = css`
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
   align-items: center;
   overflow-x: auto;
-  gap: 0rem;
   ${'' /* height: 80vh; */}
   ${'' /* margin-top: 2.375rem; */}
   text-align: center;
@@ -24,18 +25,25 @@ const flexContainer = css`
       ${'' /* margin-left: 10%;
       margin-right: 10%; */}
   }
-  @media (min-width: 1200px) {
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) { 
       align-items: start;
       gap: 0.5rem;
-      ${'' /* margin-left: 12%;
-      margin-right: 12%; */}
-      ${'' /* height: 80vh; */}
+      flex-direction: row;
+   }
+
+  @media (min-width: 1200px) {
+      ${'' /* align-items: start;
+      gap: 0.5rem;
+      flex-direction: row; */}
   }
 `
 
 const flexItem = css`
   text-align: center;
   position: relative;
+  cursor: pointer;
   ${'' /* margin-bottom: 1.875rem; */}
   flex: 1 0 80%;
   @media (min-width: 768px) {
@@ -67,38 +75,6 @@ const MagnifyingGlassIcon = styled(SearchPlus)`
   /*border: 1px solid green;*/
   `
 
-const flexContainerN = css`
-  /*border: 1px solid black;*/
-  display: flex;
-  flex-flow: column nowrap;
-  ${'' /* margin-top: 2.375rem; */}
-  margin-bottom: 2rem;
-  text-align: center;
-  
-  @media (min-width: 768px) {
-  flex-flow: row nowrap;
-  margin-left: 15%;
-  margin-right: 15%;
-  text-align: center;
-  }
-  @media (min-width: 1200px) {
-  margin-left: 12%;
-  margin-right: 12%;
-  }
-  `
-
-const flexItemN = css`
-  position: relative;
-   /*border: 1px solid white;*/
-   /*margin-right: 0.625rem;*/
-  @media (min-width: 768px) {
-      margin-right: 0.625rem;
-  }
-  @media (min-width: 1200px) {
-      margin-right: 0.625rem;
-  }
-  `
-
 const Div = styled.div`
   /*border: 1px solid red;*/
   /* margin-bottom: 1.875rem;  */
@@ -121,14 +97,7 @@ const img = css`
 
 
 function Logofolio(props) {
-    /*const [isShown, setIsShown] = useState({
-        one: false,
-        two: false,
-        three: false,
-        four: false,
-        five: false
-    });
-*/
+
     const [isShown1, setIsShown1] = useState(false);
     const [isShown2, setIsShown2] = useState(false);
     const [isShown3, setIsShown3] = useState(false);

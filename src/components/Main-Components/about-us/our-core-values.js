@@ -8,6 +8,15 @@ const base = css`
   grid-gap: 1rem;
   grid-template-columns: 1fr;
   padding: 0.25rem 1.5rem;
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) { 
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 0.25rem;
+      font-size: 0.9rem;
+   }
+
+  // Extra large devices (large desktops, 1200px and up)
   @media (min-width: 1200px) {
       grid-template-columns: 1fr 1fr 1fr;
       padding: 1rem 0.25rem;
@@ -21,7 +30,7 @@ const base = css`
       background-position: center;
       background-size: cover;
       @media (min-width: 768px) {
-        padding: 0.5rem 0.25rem;
+        ${'' /* padding: 0.5rem 0.25rem; */}
       }
       @media (min-width: 1200px) {
         ${'' /* padding: 0.5rem 0.25rem; */}
@@ -46,6 +55,16 @@ const base = css`
           /* opacity: 0.75; */
           text-align: center;
           margin: 1rem;
+
+          // Large devices (desktops, 992px and up)
+          @media (min-width: 992px) { 
+              font-size: 1.2rem;
+           }
+              
+          // Extra large devices (large desktops, 1200px and up)
+          @media (min-width: 1200px) { 
+            font-size: clamp(1rem, -0.875rem + 8.333vw, 1.75rem);
+           }
       }
       & > div:nth-of-type(2) {
           margin: 1rem;

@@ -2,15 +2,16 @@
 
 import { css, jsx } from "@emotion/react"
 import Image from "next/image"
+import ShowMoreText from 'react-show-more-text';
 
 const AboutUs = () => (
     <div
         css={css`
           // X-Small devices (portrait phones, less than 576px)
           display: grid;
-          grid-template-rows: repeat(6, 1fr);
+          grid-template-rows: repeat(4, 1fr);
           /* grid-auto-rows: 50vh; */
-          background: linear-gradient(to top, #01102a 0%, transparent 90%);
+          background: linear-gradient(to top, #01102a -10%, transparent 150%);
 
           // Medium devices (tablets, 768px and up)
           @media (min-width: 768px) { 
@@ -18,15 +19,19 @@ const AboutUs = () => (
               background: linear-gradient(to top, #01102a 0%, transparent 70%);
            }
 
-           @media (min-width: 992px) { 
+          // Large devices (desktops, 992px and up)
+          @media (min-width: 992px) { 
               background: none;
+              grid-template-columns: 1fr 1fr;
+              grid-auto-rows: 100vh;
+              grid-template-rows: 100vh 100vh;
            }
           
           // X-Large devices (large desktops, 1200px and up)
           @media (min-width: 1200px) {
-              grid-template-columns: 1fr 1fr;
+              /* grid-template-columns: 1fr 1fr;
               grid-auto-rows: 100vh;
-              grid-template-rows: auto;
+              grid-template-rows: auto; */
               }
           height: 110%;
           position: relative;
@@ -52,16 +57,25 @@ const AboutUs = () => (
               align-self: center;
               padding: 1rem;
               grid-column: 1;
-              grid-row: 3 / 7;
+              grid-row: 3 / 5;
               /* margin-top: -5rem; */
+
               // Large devices (desktops, 992px and up)
-              @media (min-width: 992px) {  }
-              // X-Large devices (large desktops, 1200px and up)
-              @media (min-width: 1200px) { 
+              @media (min-width: 992px) { 
                   margin-right: -1rem;
                   padding: 0;
                   margin-top: 0;
                   grid-row: 1 / 2;
+                  font-size: 0.9rem;
+               }
+
+              // X-Large devices (large desktops, 1200px and up)
+              @media (min-width: 1200px) { 
+                  /* margin-right: -1rem;
+                  padding: 0;
+                  margin-top: 0;
+                  grid-row: 1 / 2; */
+                  font-size: 1rem;
                }
               `}
         >
@@ -102,12 +116,13 @@ const AboutUs = () => (
                   // Large devices (desktops, 992px and up)
                   @media (min-width: 992px) { 
                       /* font-size: 0.9rem; */
+                      text-align: left;
                    }
                           
                   // X-Large devices (large desktops, 1200px and up)
                   @media (min-width: 1200px) { 
-                      text-align: left;
-                      padding: 1rem 0;
+                      /* text-align: left;
+                      padding: 1rem 0; */
                    }
                           
                   // XX-Large devices (larger desktops, 1400px and up)
@@ -123,14 +138,14 @@ const AboutUs = () => (
               /* padding: 0 10%; */
               /* margin-top: 12.5rem; */
               margin-right: -2rem;
-              grid-row: 1 / 6;
+              grid-row: 1 / 5;
               grid-column: 1;
               z-index: -1;
               align-self: center;
               justify-self: center;
               position: relative;
               width: 100%;
-              height: 130%;
+              height: 40rem;
               /* margin-bottom: -15rem; */
 
               @media (max-width: 320px) {
@@ -148,10 +163,7 @@ const AboutUs = () => (
                }
                       
               // Large devices (desktops, 992px and up)
-              @media (min-width: 992px) {  }
-                      
-              // X-Large devices (large desktops, 1200px and up)
-              @media (min-width: 1200px) { 
+              @media (min-width: 992px) { 
                   grid-row: 1 / 2;
                   grid-column: 2 / 3;
                   align-self: center;
@@ -160,6 +172,20 @@ const AboutUs = () => (
                   margin-right: 0;
                   margin-bottom: 0;
                   width: 50%;
+                  height: 150%;
+               }
+                      
+              // X-Large devices (large desktops, 1200px and up)
+              @media (min-width: 1200px) { 
+                  /* grid-row: 1 / 2;
+                  grid-column: 2 / 3;
+                  align-self: center;
+                  padding: 0 15%;
+                  margin-top: 25rem;
+                  margin-right: 0;
+                  margin-bottom: 0;
+                  width: 50%;
+                  height: 130%; */
                   height: 130%;
                }
                       
@@ -170,7 +196,7 @@ const AboutUs = () => (
                 src="/images/webanah-character1.png"
                 layout="fill"
                 objectFit="cover"
-                objectPosition="50% -25%"
+                objectPosition="50% -35%"
             // width={638}
             // height={1297}
             />

@@ -9,14 +9,14 @@ const Services = () => (
     css={css`
           display: flex;
           flex-direction: column;
-          /* font-size: 0.55rem; */
+          font-size: clamp(0.6rem, -0.875rem + 7.333vw, 1rem);
           text-align: center;
           `}>
     <div
       css={css`
               /* padding: 0 5rem; */
               display: grid;
-              gap: 1rem;
+              gap: 0.25rem;
               grid-template-columns: repeat(3, 1fr);
               grid-template-rows: repeat(3, 1fr);
               align-items: center;
@@ -271,7 +271,7 @@ const Services = () => (
               @media (min-width: 1025px) and (max-width: 1280px) {
               
                 /* CSS */
-                margin-top: -14rem;
+                margin-top: -7rem;
                 padding: 0 2rem;
               
               }

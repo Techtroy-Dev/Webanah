@@ -10,6 +10,7 @@ import { Scrolls } from "../src/components/Sub-Components/scrollbars"
 import Logfolio from "../src/components/Main-Components/portfolio/logofolio"
 import Branding from "../src/components/Main-Components/portfolio/branding"
 import Websites from "../src/components/Main-Components/portfolio/websites"
+import Apps from "../src/components/Main-Components/portfolio/apps"
 import Layout from "../src/components/Main-Components/Layout"
 
 const Space = styled.div`
@@ -19,7 +20,7 @@ const Space = styled.div`
 `
 
 const Container = styled.div`
-  width: 300vw;
+  width: 400vw;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -55,6 +56,7 @@ const Panel = styled.div`
 	  padding: 0;
 	  width: 100vw;
   	  height: 100vh;
+      padding: 0 5rem;
    }
 
   // X-Large devices (large desktops, 1200px and up)
@@ -71,7 +73,7 @@ const Panel = styled.div`
 const Portfolio = () => {
     const containerRef = useRef(null)
     const [section, setSection] = useState(0); // Section of page we are currently ON.
-    const sectionTitles = ['LOGOFOLIO', 'BRANDING', 'WEBSITES']
+    const sectionTitles = ['LOGOFOLIO', 'BRANDING', 'WEBSITES', 'MOBILE APPS']
     gsap.registerPlugin(ScrollTrigger);
 
     useEffect(() => {
@@ -151,7 +153,7 @@ const Portfolio = () => {
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <link rel="shortcut icon" href="/images/Webanah_logo.png" type="image/png"></link>
             </Head>
-            <Scrolls total={3} current={section} sectionTitles={sectionTitles} />
+            <Scrolls total={4} current={section} sectionTitles={sectionTitles} />
             <Layout backgroundimage='/images/background2.png'>
                 {/* <PortfolioCard /> */}
                 <div>
@@ -166,9 +168,9 @@ const Portfolio = () => {
                         <Panel className="panel">
                             <Websites />
                         </Panel>
-                        {/* <Panel className="panel">
-                            <MobileApps />
-                        </Panel> */}
+                        <Panel className="panel">
+                            <Apps />
+                        </Panel>
                     </Container>
                     <Space />
                 </div>

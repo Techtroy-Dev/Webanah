@@ -13,11 +13,17 @@ const AppDevelopment = () => (
           display: grid;
           /* grid-auto-rows: 50vh; */
           /* row-gap: 2rem; */
+
+          // Large devices (desktops, 992px and up)
+          @media (min-width: 992px) { 
+              grid-template-columns: 1fr 1fr;
+              grid-auto-rows: 100vh;
+           }
           
           // X-Large devices (large desktops, 1200px and up)
           @media (min-width: 1200px) {
-              grid-template-columns: 1fr 1fr;
-              grid-auto-rows: 100vh;
+              /* grid-template-columns: 1fr 1fr;
+              grid-auto-rows: 100vh; */
               }
           `}
     >
@@ -27,10 +33,16 @@ const AppDevelopment = () => (
               align-self: center;
               /* margin-top: -8rem; */
 
+              // Large devices (desktops, 992px and up)
+              @media (min-width: 992px) { 
+                  margin-right: -3rem;
+               }
+
               // X-Large devices (large desktops, 1200px and up)
               @media (min-width: 1200px) { 
+                  /* margin-top: -5rem;
+                  margin-right: -3rem; */
                   margin-top: -5rem;
-                  margin-right: -3rem;
                }
               `}
         >
@@ -44,10 +56,16 @@ const AppDevelopment = () => (
                   letter-spacing: 0.1rem;
                   text-align: center;
 
-                  // X-Large devices (large desktops, 1200px and up)
-                  @media (min-width: 1200px) { 
+                  // Large devices (desktops, 992px and up)
+                  @media (min-width: 992px) { 
                       text-align: left;
                       margin-right: -5rem;
+                   }
+
+                  // X-Large devices (large desktops, 1200px and up)
+                  @media (min-width: 1200px) { 
+                      /* text-align: left;
+                      margin-right: -5rem; */
                    }
                   `}
             >
@@ -71,13 +89,16 @@ const AppDevelopment = () => (
                   // Large devices (desktops, 992px and up)
                   @media (min-width: 992px) { 
                       /* font-size: 0.8rem; */
+                      font-size: 0.8rem;
+                      text-align: left;
+                      padding: 0;
                    }
                           
                   // X-Large devices (large desktops, 1200px and up)
                   @media (min-width: 1200px) { 
-                      font-size: 0.9rem;
-                      text-align: left;
-                      padding: 0;
+                      font-size: 1rem;
+                      /* text-align: left;
+                      padding: 0; */
                    }
                           
                   // XX-Large devices (larger desktops, 1400px and up)
@@ -116,14 +137,19 @@ const AppDevelopment = () => (
                }
                       
               // Large devices (desktops, 992px and up)
-              @media (min-width: 992px) {  }
-                      
-              // X-Large devices (large desktops, 1200px and up)
-              @media (min-width: 1200px) { 
+              @media (min-width: 992px) { 
                   grid-column: 2 / 3;
                   padding: 0 10%;
                   align-self: center;
-                  margin-bottom: 5rem;
+                  /* margin-bottom: 5rem; */
+               }
+                      
+              // X-Large devices (large desktops, 1200px and up)
+              @media (min-width: 1200px) { 
+                  /* grid-column: 2 / 3;
+                  padding: 0 10%;
+                  align-self: center;
+                  margin-bottom: 5rem; */
                }
 
               animation: move_ad 1s linear infinite;
